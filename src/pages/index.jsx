@@ -293,7 +293,7 @@ export default function Home() {
             <span className="image-caption">Giacomo Gex as Mott</span>
           </div>
         </section>
-        <PressAside review={film.reviews.find((r) => r.placement === "story")} />
+        <PressAside review={film.reviews.find((r) => r.placement === "statement")} />
         <section className="statement section" id="statement" aria-labelledby="statement-title">
           <SectionLabel number="03">RICHARD MELKONIAN / FIELD NOTES</SectionLabel>
           <h2 id="statement-title">Director’s statement.</h2>
@@ -386,6 +386,7 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <PressAside review={film.reviews.find((r) => r.placement === "gallery")} />
         <section className="festivals section" id="festivals">
           <SectionLabel number="06">ON THE BIG SCREEN</SectionLabel>
           <div className="section-heading">
