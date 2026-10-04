@@ -870,6 +870,17 @@ footer > div {
     monospace;
   color: var(--muted);
 }
+.footer-film-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+.footer-film-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+}
 .mobile-actions {
   display: none;
 }

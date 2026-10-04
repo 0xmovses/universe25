@@ -684,6 +684,14 @@ export default function Home() {
           <a href={film.instagram} target="_blank" rel="noreferrer">
             @richard_melkonian <Arrow />
           </a>
+          <nav className="footer-film-links" aria-label="Film profiles">
+            <a href="https://www.imdb.com/title/tt22802312/" target="_blank" rel="noreferrer">
+              IMDb <Arrow />
+            </a>
+            <a href="https://letterboxd.com/film/universe-25-2025/" target="_blank" rel="noreferrer">
+              Letterboxd <Arrow />
+            </a>
+          </nav>
         </div>
       </footer>
       <div className="mobile-actions">
