@@ -50,3 +50,7 @@ Additional coverage found: The Movie Gourmet’s “2025: 14 new filmmakers to w
 ## Filmmaker update — 4 October 2026
 
 Richard confirmed Universe25 was selected for Fantaspoa 2025 and Popcorn Frights Film Festival 2025 in this chat. Both are displayed as **Official selection · 2025**, without asserting a screening date, premiere status, competition category or award. Festival identity links supplied by Richard and checked: https://filmfreeway.com/Fantaspoa and https://filmfreeway.com/PopcornFrights. Selection evidence is the filmmaker’s direct confirmation; these general festival profiles are not represented as film-specific selection records. Added to both the homepage festival ribbon and festival history.
+
+## Design and contact update — 4 October 2026
+
+Richard requested the comb-across-the-eyes still as the hero, a lighter title, bolder top credits and removal of the added “Sent to save us / Tempted to be us” slogan. The original logline now leads a restrained dark synopsis section; the bright split panel and outlined tags were removed. The public website contact and press ZIP readme now use richard@melkonian.xyz, as explicitly supplied. The downloadable original EPK remains unchanged and retains its historical contact address.

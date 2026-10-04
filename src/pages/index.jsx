@@ -134,8 +134,8 @@ export default function Home() {
       <main id="main">
         <section className="hero" aria-labelledby="film-title">
           <Still
-            name="mott-lamb"
-            alt="Mott holds a lamb on the bank of the Thames in a black-and-white frame from Universe25."
+            name="mirror"
+            alt="Mott holds a hair comb across his eyes in Universe25."
             className="hero-image"
             eager
             sizes="100vw"
@@ -154,18 +154,11 @@ export default function Home() {
             </span>
           </div>
           <div className="hero-content">
-            <p className="eyebrow">
-              AN ANGEL. THREE TASKS. THE END OF THE WORLD.
-            </p>
             <h1 id="film-title">
               UNIVERSE<span>25</span>
             </h1>
             <div className="hero-bottom">
-              <p>
-                An angel from the future.
-                <br />
-                An all-too-human world.
-              </p>
+              <p>{film.logline}</p>
               <div className="hero-actions">
                 <button
                   className="button green"
@@ -245,13 +238,8 @@ export default function Home() {
         </section>
         <section className="story" id="film">
           <div className="story-copy">
-            <SectionLabel number="02">THE FILM</SectionLabel>
-            <h2>
-              Sent to save us.
-              <br />
-              <em>Tempted to be us.</em>
-            </h2>
-            <p className="intro">{film.logline}</p>
+            <p className="eyebrow">THE FILM</p>
+            <h2>{film.logline}</h2>
             {film.synopsis.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -668,7 +656,7 @@ export function Head({ data }) {
       <meta property="og:image:height" content="630" />
       <meta
         property="og:image:alt"
-        content="Mott holding a lamb by the Thames in Universe25"
+        content="Mott holding a hair comb across his eyes in Universe25"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
