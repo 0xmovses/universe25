@@ -2,7 +2,7 @@
 
 A Gatsby + React film and press website for Richard Melkonian’s **Universe25**. The design follows the supplied EPK: black, electric green, original 16mm stills and restrained typography.
 
-Includes the supplied YouTube trailer, seven attributed review excerpts, verified festival history, all four EPK biographies, full director’s statement, cast and crew, mobile navigation, downloadable EPK / poster / press ZIP, screener and interview email requests, accessible image and trailer dialogs, social links, share / copy utilities, social preview metadata and Movie structured data.
+Includes the supplied YouTube trailer, seven attributed review excerpts, verified festival history, four filmmaker biographies, full director’s statement, cast and crew, mobile navigation, downloadable EPK / poster / press ZIP, screener and interview email requests, accessible image and trailer dialogs, social links, share / copy utilities, social preview metadata and Movie structured data.
 
 ## Run
 
@@ -32,7 +32,8 @@ The GitHub Actions workflow deploys `public/` with Pages. Configure Pages to use
 ## Edit
 
 - `src/data/film.json`: synopsis, contact, social links, cast, credits, festivals, reviews and technical facts.
-- `src/data/bios.json`: all EPK biographies.
+- `src/data/bios.json`: website biographies.
+- `src/data/bts.json`: the 126-photo production gallery and source filenames.
 - `src/data/statement.json`: director’s statement.
 - `src/pages/index.jsx`: page and interactions.
 - `src/styles/site.css`: responsive EPK-inspired design.

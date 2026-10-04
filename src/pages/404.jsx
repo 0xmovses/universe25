@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import "../styles/site.css";
+import Arrow from "../components/Arrow";
 export default function NotFound() {
   return (
     <main className="not-found">
@@ -12,7 +13,7 @@ export default function NotFound() {
       </h1>
       <p>The page you’re looking for isn’t here.</p>
       <Link className="button green" to="/">
-        Return to the film ↗
+        Return to the film <Arrow />
       </Link>
     </main>
   );

@@ -72,3 +72,17 @@ The hero title is smaller, heavier and italic, with a hard offset shadow. A dedi
 Google Drive was searched for `BTS Universe25` through the filmmaker’s signed-in browser. The shared `Universe25 BTS` folder (`17-ZDEvsAzCZx9atFYdrN-eYDsFq_6fuR`) contains production photographs. `P1010619.JPG`, `P1010622.JPG` and `P1010624.JPG` were downloaded and used for a three-image production BTS gallery. No photographer credit was available in the inspected folder; none is invented. The folder’s access permissions were not changed and its private navigation link is not published on the site.
 
 The afterparty gallery is reduced to four selected photographs (original items 1, 3, 4 and 6). Visible credits now include AFS London (Armenian Film Society London), Armenian Film Festival London, Christabel’s Sunday Service, ICA London and photographer @roscoreckless. Production BTS is separate from the event photographs.
+
+
+## Audience, press and full BTS gallery — 4 October 2026
+
+The filmmaker requested an audience journey led by curiosity, with a distinct, direct press invitation and a restrained rugged, lo-fi science-fiction feel. The comb hero is retained with a lighter italic title; its text stroke, offset shadow and image shading are removed. Small registration marks, faint grain and monospaced labels extend the existing black-and-green design. The film and director’s statement now precede reviews; the statement has a navigation link, explicit heading and its original opening paragraph visible. The full statement remains available. Press copy is reduced to screener, interview, screening, download and contact actions. Elodie’s website biography is condensed from the supplied EPK; no new career claims were added and the archival EPK is unchanged.
+
+The connected Google Drive plugin enumerated and downloaded all 126 JPEG photographs from the previously identified Universe25 BTS folder. All were reviewed in contact sheets; selected photographs were also inspected enlarged. The featured selection is `P1010642.JPG` (candlelit set), `P1010717.JPG` (riverside cross setup), and `P1010744.JPG` (night shoot on stone steps). An optional contact sheet exposes the remaining 123 photographs. One MP4 in the folder is excluded from the photo gallery.
+
+`src/data/bts.json` maps the photographs to source filenames and visual descriptions. Three responsive WebP sizes per photograph are served locally; original JPEGs and temporary review sheets remain outside the repository. The gallery makes no authenticated Drive requests and exposes no private download credentials. It is initially collapsed and unmounted, with lazy image loading when opened. The image viewer supports previous/next buttons and left/right arrow keys. Production photographs remain separate from film stills and the credited UK-premiere event photographs. No BTS photographer credit was supplied in the inspected folder.
+
+
+## Title, icons and statement punctuation — 4 October 2026
+
+At the filmmaker’s request, the hero title is upright and the 2 in 25 is raised above the baseline. Every diagonal arrow is an inline SVG, avoiding platform emoji substitution. The three em dashes in the website director’s statement are replaced with colons or a sentence break. The downloadable archival EPK remains the supplied original. These edits and the preceding audience/press and full BTS gallery changes are committed together.

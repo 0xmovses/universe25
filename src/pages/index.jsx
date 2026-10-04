@@ -3,7 +3,9 @@ import { withPrefix, graphql } from "gatsby";
 import film from "../data/film.json";
 import bios from "../data/bios.json";
 import statement from "../data/statement.json";
+import btsGallery from "../data/bts.json";
 import "../styles/site.css";
+import Arrow from "../components/Arrow";
 
 const premierePhotos = [
   "Two guests posing together at the Universe25 UK premiere afterparty",
@@ -17,14 +19,9 @@ const premierePhotos = [
   "Conversation on the dance floor at Christabel’s",
   "Two guests raising their glasses at the afterparty",
 ].map((alt, i) => ({ id: `premiere-${i + 1}`, alt, festival: true })).filter((_, i) => [0, 2, 3, 5].includes(i));
-const btsPhotos = [
-  { id: "bts-set", alt: "The paper-strewn room and dressing table on the Universe25 set." },
-  { id: "bts-camera", alt: "A camera operator frames a scene on the Universe25 set." },
-  { id: "bts-crew", alt: "Cast and crew prepare a shot beside the camera monitor on Universe25." },
-].map((photo) => ({ ...photo, bts: true }));
+const btsPhotos = btsGallery.map((photo) => ({ ...photo, bts: true }));
 const premierePost = "https://www.instagram.com/p/DSIh881CIze/";
 const asset = (path) => withPrefix(path);
-const Arrow = () => <span aria-hidden="true">↗</span>;
 const Play = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M8 4v16l13-8z" />
@@ -72,11 +69,13 @@ function Download({ href, children, meta }) {
     </a>
   );
 }
-const request = `mailto:${film.email}?subject=${encodeURIComponent("Universe25 — review screener / interview request")}&body=${encodeURIComponent("Hello Richard,\n\nI would like to cover Universe25.\n\nName / publication / channel:\nProfile or website:\nPlanned coverage and timing:\nScreener or interview request:\n\nThank you!")}`;
+const request = `mailto:${film.email}?subject=${encodeURIComponent("Universe25 — review screener request")}&body=${encodeURIComponent("Hello Richard,\n\nI would like to cover Universe25.\n\nName / publication / channel:\nProfile or website:\nPlanned coverage and timing:\nReview screener request:\n\nThank you!")}`;
 
 export default function Home() {
   const [menu, setMenu] = React.useState(false);
   const [modal, setModal] = React.useState(null);
+  const [galleryOpen, setGalleryOpen] = React.useState(false);
+  const galleryToggle = React.useRef(null);
   const [message, setMessage] = React.useState("");
   const dialog = React.useRef(null);
   React.useEffect(() => {
@@ -86,6 +85,13 @@ export default function Home() {
     document.body.classList.toggle("modal-open", !!modal);
     return () => document.body.classList.remove("modal-open");
   }, [modal]);
+  function stepPhoto(direction) {
+    setModal((current) => {
+      const index = btsPhotos.findIndex((photo) => photo.id === current?.id);
+      if (index < 0) return current;
+      return { type: "image", ...btsPhotos[(index + direction + btsPhotos.length) % btsPhotos.length] };
+    });
+  }
   async function copy(text, label) {
     try {
       await navigator.clipboard.writeText(text);
@@ -136,17 +142,16 @@ export default function Home() {
         >
           {[
             ["film", "The film"],
-            ["reviews", "Reviews"],
-            ["festivals", "Festivals"],
-            ["people", "The people"],
-            ["press", "Press kit"],
+            ["statement", "Director’s statement"],
+            ["stills", "Inside the film"],
+            ["behind-the-scenes", "On set"],
           ].map(([id, label]) => (
             <a key={id} href={`#${id}`} onClick={() => setMenu(false)}>
               {label}
             </a>
           ))}
-          <a className="nav-contact" href={request}>
-            Request a screener <Arrow />
+          <a className="nav-contact" href="#press" onClick={() => setMenu(false)}>
+            Press <Arrow />
           </a>
         </nav>
       </header>
@@ -160,7 +165,6 @@ export default function Home() {
             eager
             sizes="100vw"
           />
-          <div className="hero-shade" />
           <div className="hero-top">
             <span>
               A FILM BY
@@ -175,7 +179,7 @@ export default function Home() {
           </div>
           <div className="hero-content">
             <h1 id="film-title">
-              UNIVERSE<span>25</span>
+              UNIVERSE<span className="title-number"><span className="raised-two">2</span>5</span>
             </h1>
             <div className="hero-bottom">
               <p>{film.logline}</p>
@@ -186,8 +190,8 @@ export default function Home() {
                 >
                   <Play /> Watch the trailer
                 </button>
-                <a className="text-link" href="#press">
-                  Explore the press kit <span aria-hidden="true">↓</span>
+                <a className="text-link" href="#film">
+                  Follow the story <span aria-hidden="true">↓</span>
                 </a>
               </div>
             </div>
@@ -216,49 +220,9 @@ export default function Home() {
             POPCORN FRIGHTS <small>OFFICIAL SELECTION / 2025</small>
           </span>
         </div>
-        <section className="reviews section" id="reviews">
-          <SectionLabel number="01">THE WORD OUTSIDE</SectionLabel>
-          <div className="review-lead">
-            <div>
-              <span className="score">
-                9.5<span>/10</span>
-              </span>
-              <span className="eyebrow">FILM THREAT</span>
-            </div>
-            <figure>
-              <blockquote>
-                “Highly original and
-                <br className="desktop" /> completely absorbing.”
-              </blockquote>
-              <figcaption>
-                <a href={film.reviews[0].url} target="_blank" rel="noreferrer">
-                  Bobby LePire · Film Threat <Arrow />
-                </a>
-              </figcaption>
-            </figure>
-          </div>
-          <div className="reviews-grid">
-            {film.reviews.slice(1).map((r) => (
-              <figure key={r.outlet}>
-                <blockquote lang={r.language}>“{r.quote}”</blockquote>
-                {r.translation && (
-                  <p className="translation">{r.translation}</p>
-                )}
-                <figcaption>
-                  <a href={r.url} target="_blank" rel="noreferrer">
-                    {r.outlet} <Arrow />
-                  </a>
-                  <span>
-                    {r.author} · {r.date}
-                  </span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </section>
         <section className="story" id="film">
           <div className="story-copy">
-            <p className="eyebrow">THE FILM</p>
+            <SectionLabel number="01">THE FILM</SectionLabel>
             <h2>{film.logline}</h2>
             {film.synopsis.map((p) => (
               <p key={p}>{p}</p>
@@ -276,6 +240,38 @@ export default function Home() {
               sizes="(max-width: 900px) 100vw, 45vw"
             />
             <span className="image-caption">Giacomo Gex as Mott</span>
+          </div>
+        </section>
+        <section className="statement section" id="statement" aria-labelledby="statement-title">
+          <SectionLabel number="02">RICHARD MELKONIAN / FIELD NOTES</SectionLabel>
+          <h2 id="statement-title">Director’s statement.</h2>
+          <div className="statement-layout">
+            <blockquote className="statement-quote">
+              “My primary goal
+              <br />
+              was to conjure
+              <br />
+              <em>an original mood.</em>”
+            </blockquote>
+            <div>
+              <p className="intro">{statement[0]}</p>
+              <p className="byline">
+                RICHARD MELKONIAN
+                <br />
+                <span>Writer · Director · Composer</span>
+              </p>
+              <details>
+                <summary>
+                  Read the full director’s statement{" "}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <div className="long-copy">
+                  {statement.slice(1).map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </div>
+              </details>
+            </div>
           </div>
         </section>
         <section className="trailer section" id="trailer">
@@ -327,14 +323,54 @@ export default function Home() {
                 <Still name={g.id} alt={g.alt} />
                 <span>
                   <span>0{i + 1} / UNIVERSE25</span>
-                  <span aria-hidden="true">↗</span>
+                  <Arrow />
                 </span>
               </button>
             ))}
           </div>
         </section>
+        <section className="reviews section" id="reviews">
+          <SectionLabel number="05">THE WORD OUTSIDE</SectionLabel>
+          <div className="review-lead">
+            <div>
+              <span className="score">
+                9.5<span>/10</span>
+              </span>
+              <span className="eyebrow">FILM THREAT</span>
+            </div>
+            <figure>
+              <blockquote>
+                “Highly original and
+                <br className="desktop" /> completely absorbing.”
+              </blockquote>
+              <figcaption>
+                <a href={film.reviews[0].url} target="_blank" rel="noreferrer">
+                  Bobby LePire · Film Threat <Arrow />
+                </a>
+              </figcaption>
+            </figure>
+          </div>
+          <div className="reviews-grid">
+            {film.reviews.slice(1).map((r) => (
+              <figure key={r.outlet}>
+                <blockquote lang={r.language}>“{r.quote}”</blockquote>
+                {r.translation && (
+                  <p className="translation">{r.translation}</p>
+                )}
+                <figcaption>
+                  <a href={r.url} target="_blank" rel="noreferrer">
+                    {r.outlet} <Arrow />
+                  </a>
+                  <span>
+                    {r.author} · {r.date}
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
         <section className="festivals section" id="festivals">
-          <SectionLabel number="05">ON THE BIG SCREEN</SectionLabel>
+          <SectionLabel number="06">ON THE BIG SCREEN</SectionLabel>
           <div className="section-heading">
             <h2>Festival journey.</h2>
             <span className="eyebrow">PREMIERES & SELECTIONS</span>
@@ -381,7 +417,7 @@ export default function Home() {
                     sizes="(max-width: 700px) 45vw, 23vw"
                   />
                   <span aria-hidden="true">
-                    {String(i + 1).padStart(2, "0")} <span>↗</span>
+                    {String(i + 1).padStart(2, "0")} <Arrow />
                   </span>
                 </button>
               ))}
@@ -401,64 +437,52 @@ export default function Home() {
           </div>
         </section>
         <section className="bts section" id="behind-the-scenes">
-          <SectionLabel number="06">BEHIND THE SCENES</SectionLabel>
+          <SectionLabel number="07">BEHIND THE SCENES</SectionLabel>
           <div className="section-heading">
             <h2>Before the frame.</h2>
-            <span className="eyebrow">ON SET / UNIVERSE25</span>
+            <span className="eyebrow">PRODUCTION PHOTOGRAPHS / {btsPhotos.length} FRAGMENTS</span>
           </div>
           <div className="gallery-grid bts-grid">
-            {btsPhotos.map((photo, i) => (
+            {btsPhotos.slice(0, 3).map((photo, i) => (
               <button key={photo.id}
                 onClick={() => setModal({ type: "image", ...photo })}
                 aria-label={`Enlarge behind-the-scenes photo ${i + 1}: ${photo.alt}`}>
                 <Still name={photo.id} alt={photo.alt}
                   sizes="(max-width: 700px) 100vw, 31vw" />
-                <span><span>0{i + 1} / ON SET</span><span aria-hidden="true">↗</span></span>
+                <span><span>0{i + 1} / ON SET</span><Arrow /></span>
               </button>
             ))}
           </div>
-        </section>
-        <section className="statement section">
-          <SectionLabel number="07">IN THE DIRECTOR’S WORDS</SectionLabel>
-          <div className="statement-layout">
-            <h2>
-              “My primary goal
-              <br />
-              was to conjure
-              <br />
-              <em>an original mood.</em>”
-            </h2>
-            <div>
-              <p className="intro">
-                Music, image and text. A film discovered in the making.
-              </p>
-              <p>
-                Written as it was shot, composed as it was edited: Richard
-                Melkonian’s debut feature grew through a fluid exchange between
-                storytelling, performance and music.
-              </p>
-              <p className="byline">
-                RICHARD MELKONIAN
-                <br />
-                <span>Writer · Director · Composer</span>
-              </p>
-              <details>
-                <summary>
-                  Read the full director’s statement{" "}
-                  <span aria-hidden="true">+</span>
-                </summary>
-                <div className="long-copy">
-                  {statement.map((p) => (
-                    <p key={p}>{p}</p>
-                  ))}
-                </div>
-              </details>
-            </div>
+          <div className="gallery-controls">
+            <button className="text-link" ref={galleryToggle}
+              aria-expanded={galleryOpen} aria-controls="bts-full-gallery"
+              onClick={() => setGalleryOpen(!galleryOpen)}>
+              {galleryOpen ? "Close the contact sheet" : `Open the full BTS gallery · ${btsPhotos.length} photographs`}
+              <span aria-hidden="true">{galleryOpen ? "−" : "+"}</span>
+            </button>
+          </div>
+          <div id="bts-full-gallery" hidden={!galleryOpen}>
+            {galleryOpen && <>
+              <div className="gallery-grid bts-contact-sheet">
+                {btsPhotos.slice(3).map((photo, i) => (
+                  <button key={photo.id} onClick={() => setModal({ type: "image", ...photo })}
+                    aria-label={`Enlarge behind-the-scenes photo ${i + 4}: ${photo.alt}`}>
+                    <Still name={photo.id} alt={photo.alt} sizes="(max-width: 700px) 45vw, 22vw" />
+                    <span><span>{String(i + 4).padStart(3, "0")} / ON SET</span><Arrow /></span>
+                  </button>
+                ))}
+              </div>
+              <button className="text-link gallery-close" onClick={() => {
+                setGalleryOpen(false);
+                galleryToggle.current?.focus();
+                galleryToggle.current?.scrollIntoView({ block: "center" });
+              }}>Close the contact sheet <span aria-hidden="true">−</span></button>
+            </>}
           </div>
         </section>
         <section className="people section" id="people">
           <SectionLabel number="08">THE PEOPLE BEHIND THE FILM</SectionLabel>
-          <h2>A shared vision.</h2>
+          <h2>Cast & crew.</h2>
           <div className="people-grid">
             {bios.map((b) => (
               <article key={b.id}>
@@ -486,7 +510,7 @@ export default function Home() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            {b.attribution} ↗
+                            {b.attribution} <Arrow />
                           </a>
                         ) : (
                           b.attribution
@@ -529,25 +553,15 @@ export default function Home() {
           </p>
         </section>
         <section className="press section" id="press">
-          <SectionLabel number="09">FOR PRESS & CREATORS</SectionLabel>
+          <SectionLabel number="09">PRESS / CONTACT & MATERIALS</SectionLabel>
           <div className="press-layout">
             <div>
-              <h2>
-                Let’s talk
-                <br />
-                about <em>Universe25.</em>
-              </h2>
-              <p className="intro">
-                Reviewing the film? Making a video? Planning an interview?
-              </p>
-              <p>
-                Find the story, credits, photography and press kit here. For a
-                review screener, interviews or screening enquiries, get in touch
-                with Richard.
-              </p>
-              <a className="button green" href={request}>
-                Request a screener / interview <Arrow />
-              </a>
+              <h2>Press.</h2>
+              <div className="press-requests">
+                <a className="text-link" href={request}>Request a screener <Arrow /></a>
+                <a className="text-link" href={`mailto:${film.email}?subject=${encodeURIComponent("Universe25 — interview request")}`}>Arrange an interview <Arrow /></a>
+                <a className="text-link" href={`mailto:${film.email}?subject=${encodeURIComponent("Universe25 — screening enquiry")}`}>Enquire about a screening <Arrow /></a>
+              </div>
               <a className="email-link" href={`mailto:${film.email}`}>
                 {film.email}
               </a>
@@ -600,15 +614,15 @@ export default function Home() {
                 }
               >
                 <span>
-                  Copy synopsis<small>READY FOR YOUR REVIEW NOTES</small>
+                  Copy synopsis<small>LOGLINE & SYNOPSIS</small>
                 </span>
-                <span aria-hidden="true">↗</span>
+                <Arrow />
               </button>
               <button className="download" onClick={share}>
                 <span>
-                  Share the film<small>SEND THE WEBSITE TO SOMEONE</small>
+                  Share the film<small>COPY OR SHARE THE LINK</small>
                 </span>
-                <span aria-hidden="true">↗</span>
+                <Arrow />
               </button>
               <p className="copy-status" role="status" aria-live="polite">
                 {message}
@@ -641,8 +655,8 @@ export default function Home() {
         <button onClick={() => setModal({ type: "trailer" })}>
           <Play /> Watch trailer
         </button>
-        <a href="#press">
-          Press kit <span aria-hidden="true">↗</span>
+        <a href="#film">
+          Explore the film <Arrow />
         </a>
       </div>
       <dialog
@@ -650,6 +664,13 @@ export default function Home() {
         className={
           modal?.type === "image" ? "media-dialog image-dialog" : "media-dialog"
         }
+        onKeyDown={(event) => {
+          if (!modal?.bts) return;
+          if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+            event.preventDefault();
+            stepPhoto(event.key === "ArrowRight" ? 1 : -1);
+          }
+        }}
         onCancel={() => setModal(null)}
         onClose={() => setModal(null)}
         aria-label={
@@ -692,13 +713,18 @@ export default function Home() {
             <p className="video-fallback">
               Player unavailable?{" "}
               <a href={film.trailer} target="_blank" rel="noreferrer">
-                Watch directly on YouTube ↗
+                Watch directly on YouTube <Arrow />
               </a>
             </p>
           </>
         ) : modal?.type === "image" ? (
           <>
             <Still name={modal.id} alt={modal.alt} eager sizes="95vw" />
+            {modal.bts && <div className="viewer-navigation">
+              <button onClick={() => stepPhoto(-1)} aria-label="Previous BTS photograph">← Previous</button>
+              <span role="status">{btsPhotos.findIndex((photo) => photo.id === modal.id) + 1} / {btsPhotos.length}</span>
+              <button onClick={() => stepPhoto(1)} aria-label="Next BTS photograph">Next →</button>
+            </div>}
             <p>
               {modal.alt}{" "}
               {modal.bts ? null : modal.festival ? (
@@ -707,7 +733,7 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Photograph by @roscoreckless ↗
+                  Photograph by @roscoreckless <Arrow />
                 </a>
               ) : (
                 <a href={asset(`/press/${modal.id}.jpg`)} download>
