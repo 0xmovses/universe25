@@ -50,7 +50,7 @@ Additional coverage found: The Movie Gourmet’s “2025: 14 new filmmakers to w
 ## Still requiring source access / confirmation
 
 - The Dropbox media alerts (including Factory Fest), flyer, separate key art and stills, and video/audio clips were inventoried but were zero-byte placeholders. Their contents could not yet be audited. The EPK imagery is used in the meantime.
-- Factory Fest cannot be listed as a completed screening based only on a document filename. Add it when the alert or another reliable source is available.
+- FactoryFest is listed as a 2025 screening based on the filmmaker's confirmation on 4 October 2026. The local media alert is a zero-byte placeholder, and the linked festival page currently shows the 2026 programme rather than an archival listing for the film; an exact screening date remains unverified.
 - Confirm any additional festival screenings, current distribution/watch links, public contact changes, and other social accounts with the filmmaker. No unconfirmed release date or full-film availability claim is on the site.
 
 ## Filmmaker update — 4 October 2026
