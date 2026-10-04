@@ -5,6 +5,7 @@ const path = require("node:path");
 const film = require("../src/data/film.json");
 const bios = require("../src/data/bios.json");
 const statement = require("../src/data/statement.json");
+const bts = require("../src/data/bts.json");
 const root = path.join(__dirname, "..");
 test("the four biographies and full director statement are present", () => {
   assert.deepEqual(
@@ -14,7 +15,7 @@ test("the four biographies and full director statement are present", () => {
   const endings = [
     "premiered at Palm Springs 2020.",
     "hidden in the Philippines.",
-    "The Brasov European Poetry Biennale.",
+    "film magazines and poetry publications.",
     "longer-format storytelling.",
   ];
   for (const [i, b] of bios.entries())
@@ -57,6 +58,7 @@ test("all responsive still and portrait variants exist", () => {
   for (const id of [
     ...film.gallery.map((g) => g.id),
     ...bios.map((b) => b.id),
+    ...bts.map((photo) => photo.id),
     "mott-lamb",
   ])
     for (const w of [640, 1280, 1920])
