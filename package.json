@@ -1,0 +1,21 @@
+{
+  "name": "universe25",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The official Universe25 film and press website",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "dependencies": {
+    "gatsby": "^5.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "engines": {
+    "node": ">=22 <25"
+  }
+}
