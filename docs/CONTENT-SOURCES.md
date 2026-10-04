@@ -54,3 +54,5 @@ Richard confirmed Universe25 was selected for Fantaspoa 2025 and Popcorn Frights
 ## Design and contact update — 4 October 2026
 
 Richard requested the comb-across-the-eyes still as the hero, a lighter title, bolder top credits and removal of the added “Sent to save us / Tempted to be us” slogan. The original logline now leads a restrained dark synopsis section; the bright split panel and outlined tags were removed. The public website contact and press ZIP readme now use richard@melkonian.xyz, as explicitly supplied. The downloadable original EPK remains unchanged and retains its historical contact address.
+
+Cast correction supplied by Richard on 4 October 2026: Andre Flynn plays The Master. Added to the website cast credits and generated Movie metadata. The original EPK PDF remains unchanged.
