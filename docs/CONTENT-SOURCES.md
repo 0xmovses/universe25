@@ -86,3 +86,7 @@ The connected Google Drive plugin enumerated and downloaded all 126 JPEG photogr
 ## Title, icons and statement punctuation — 4 October 2026
 
 At the filmmaker’s request, the hero title is upright and the 2 in 25 is raised above the baseline. Every diagonal arrow is an inline SVG, avoiding platform emoji substitution. The three em dashes in the website director’s statement are replaced with colons or a sentence break. The downloadable archival EPK remains the supplied original. These edits and the preceding audience/press and full BTS gallery changes are committed together.
+
+## Key stills — 4 October 2026
+
+The filmmaker identified `images/Universe25_2.jpg` and `images/Universe25_5.jpg` as key images. The first now appears beside the synopsis, replacing the telephone still there; the second replaces the repeated comb still in the film gallery. Responsive WebP derivatives were regenerated from those supplied files. The comb remains the hero, and the telephone remains in the film gallery. The original Dropbox files were not changed.

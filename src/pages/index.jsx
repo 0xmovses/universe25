@@ -280,11 +280,11 @@ export default function Home() {
           </div>
           <div className="story-image">
             <Still
-              name="telephone"
-              alt="Mott listens to his mysterious caller under an electric green light."
+              name="jocasta"
+              alt="An intimate close-up of two characters in Universe25."
               sizes="(max-width: 900px) 100vw, 45vw"
             />
-            <span className="image-caption">Giacomo Gex as Mott</span>
+            <span className="image-caption">UNIVERSE25 / FILM STILL</span>
           </div>
         </section>
         <PressAside review={film.reviews.find((r) => r.placement === "statement")} />
