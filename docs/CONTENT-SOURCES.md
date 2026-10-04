@@ -65,7 +65,9 @@ Cast correction supplied by Richard on 4 October 2026: Andre Flynn plays The Mas
 
 ## Biography replacements — 4 October 2026
 
-Richard’s website biography was replaced with his supplied IMDb mini biography, preserving the supplied wording (including the Summer 2026 release statement) and author attribution. Acquisition and release wording is filmmaker-supplied, not independently reverified here. Giacomo’s older EPK biography was replaced by a concise adaptation of https://www.giacomogex.com/about-3, read on 4 October 2026, with a visible source link. The page gives no update date; its documentary project is described as information on his website rather than asserted as independently current. Original EPK downloads remain archival copies.
+Richard’s website biography was replaced with his supplied IMDb mini biography and author attribution. The former Summer 2026 release prediction was removed on 4 October 2026 because it had passed without a verified viewing destination; the acquisition wording remains filmmaker supplied and has not been independently reverified. Giacomo’s older EPK biography was replaced by a concise adaptation of https://www.giacomogex.com/about-3, read on 4 October 2026, with a visible source link. The page gives no update date; its documentary project is described as information on his website rather than asserted as independently current. Original EPK downloads remain archival copies.
+
+The review display suppresses a repeated author name when it matches the outlet. The Scare Value excerpt is attributed directly to Bryan Staebell and Scare Value (https://scarevalue.com/universe25-review/). The festival ribbon now spells out the festival names; the detailed festival list already named each event and retained only verified dates. The press social link points only to Richard’s Instagram. IMDb and Letterboxd remain film profile links in the footer. The existing screener request remains the viewing route for press until a public watch link is confirmed.
 
 ## UK premiere photographs — 4 October 2026
 

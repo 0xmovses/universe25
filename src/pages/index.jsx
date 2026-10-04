@@ -72,7 +72,7 @@ function PressAside({ review }) {
       <span className="press-aside-label">FROM THE REVIEWS / {review.outlet}</span>
       <blockquote>“{review.quote}”</blockquote>
       <a href={review.url} target="_blank" rel="noreferrer">
-        {review.author} · Read the review <Arrow />
+        {review.author} · {review.outlet} · Read the review <Arrow />
       </a>
     </aside>
   );
@@ -214,7 +214,7 @@ export default function Home() {
           aria-label="Festival premieres and official selections"
         >
           <span>
-            SLAMDANCE <small>WORLD PREMIERE / 2025</small>
+            SLAMDANCE FILM FESTIVAL <small>WORLD PREMIERE / 2025</small>
           </span>
           <span>
             CHATTANOOGA <small>FILM FESTIVAL / 2025</small>
@@ -223,10 +223,10 @@ export default function Home() {
             ARMENIAN FILM FESTIVAL <small>LONDON · ICA / 2025</small>
           </span>
           <span>
-            FANTASPOA <small>OFFICIAL SELECTION / 2025</small>
+            FANTASPOA FILM FESTIVAL <small>OFFICIAL SELECTION / 2025</small>
           </span>
           <span>
-            POPCORN FRIGHTS <small>OFFICIAL SELECTION / 2025</small>
+            POPCORN FRIGHTS FILM FESTIVAL <small>OFFICIAL SELECTION / 2025</small>
           </span>
         </div>
         <section className="reviews section" id="reviews">
@@ -262,7 +262,7 @@ export default function Home() {
                     {r.outlet} <Arrow />
                   </a>
                   <span>
-                    {r.author} · {r.date}
+                    {r.author !== r.outlet ? `${r.author} · ` : ""}{r.date}
                   </span>
                 </figcaption>
               </figure>
@@ -598,24 +598,7 @@ export default function Home() {
               </a>
               <div className="social-links">
                 <a href={film.instagram} target="_blank" rel="noreferrer">
-                  Instagram <Arrow />
-                </a>
-                <a href={film.trailer} target="_blank" rel="noreferrer">
-                  YouTube <Arrow />
-                </a>
-                <a
-                  href="https://www.imdb.com/title/tt22802312/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  IMDb <Arrow />
-                </a>
-                <a
-                  href="https://letterboxd.com/film/universe-25-2025/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Letterboxd <Arrow />
+                  Richard Melkonian on Instagram <Arrow />
                 </a>
               </div>
             </div>
