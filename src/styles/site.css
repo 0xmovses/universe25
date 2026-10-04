@@ -825,6 +825,26 @@ details[open] > summary > span {
 footer {
   padding: 65px var(--pad) 30px;
 }
+.footer-industry {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 0;
+  padding: 0 0 45px;
+  border-bottom: 1px solid var(--line);
+}
+.footer-industry img {
+  display: block;
+  width: clamp(160px, 22vw, 280px);
+  height: auto;
+}
+.footer-industry span {
+  color: var(--muted);
+  font: 10px/1.6 "Courier New", monospace;
+  letter-spacing: .08em;
+  text-align: right;
+}
 .footer-title {
   font-size: clamp(46px, 13.5vw, 210px);
   font-weight: 400;
@@ -1266,6 +1286,14 @@ footer > div {
   footer {
     padding: 45px var(--pad) 105px;
   }
+  .footer-industry {
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 35px;
+  }
+  .footer-industry img { width: 180px; }
+  .footer-industry span { text-align: left; font-size: 9px; }
   .footer-title {
     font-size: 12.5vw;
   }

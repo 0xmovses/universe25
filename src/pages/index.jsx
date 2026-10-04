@@ -671,6 +671,10 @@ export default function Home() {
         </section>
       </main>
       <footer>
+        <div className="footer-industry" aria-label="Film stock and processing credits">
+          <img src={asset("/images/shot-on-kodak-film.png")} alt="Shot on Kodak Film" loading="lazy" />
+          <span>FILM PROCESSED &amp; SCANNED AT CINELAB UK</span>
+        </div>
         <a href="#" className="footer-title" aria-label="Back to top">
           UNIVERSE25<span aria-hidden="true">↑</span>
         </a>
