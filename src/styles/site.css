@@ -1380,3 +1380,89 @@ footer > div {
     aspect-ratio: 1.4;
   }
 }
+
+/* A photographic contact sheet from the UK premiere and afterparty. */
+.premiere-journal {
+  margin-top: 85px;
+}
+.premiere-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+.premiere-heading h3 {
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  margin: 12px 0 20px;
+}
+.premiere-heading p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 14px;
+}
+.premiere-heading > a {
+  font-size: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--green);
+  flex-shrink: 0;
+}
+.premiere-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px 12px;
+}
+.premiere-grid button {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--muted);
+  text-align: left;
+  cursor: pointer;
+}
+.premiere-grid img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.2s;
+}
+.premiere-grid button:hover img {
+  filter: brightness(1.12);
+}
+.premiere-grid button > span {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 9px;
+  font:
+    11px "Courier New",
+    monospace;
+}
+.premiere-credit {
+  font:
+    11px/1.8 "Courier New",
+    monospace;
+  color: var(--muted);
+  margin: 24px 0 0;
+}
+.premiere-credit a {
+  color: var(--green);
+}
+@media (max-width: 700px) {
+  .premiere-journal {
+    margin-top: 55px;
+  }
+  .premiere-heading {
+    display: block;
+  }
+  .premiere-heading > a {
+    display: inline-block;
+  }
+  .premiere-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 10px;
+  }
+}

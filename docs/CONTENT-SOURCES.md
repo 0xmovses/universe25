@@ -60,3 +60,7 @@ Cast correction supplied by Richard on 4 October 2026: Andre Flynn plays The Mas
 ## Biography replacements — 4 October 2026
 
 Richard’s website biography was replaced with his supplied IMDb mini biography, preserving the supplied wording (including the Summer 2026 release statement) and author attribution. Acquisition and release wording is filmmaker-supplied, not independently reverified here. Giacomo’s older EPK biography was replaced by a concise adaptation of https://www.giacomogex.com/about-3, read on 4 October 2026, with a visible source link. The page gives no update date; its documentary project is described as information on his website rather than asserted as independently current. Original EPK downloads remain archival copies.
+
+## UK premiere photographs — 4 October 2026
+
+Ten photographs supplied by the filmmaker in Downloads as `igexport-DSIh881CIze*.jpg`, from https://www.instagram.com/p/DSIh881CIze/. Caption identifies Universe25 UK Premiere & Afterparty, Christabel’s Sunday Service, Armenian Film Society London and ICA London. Photographer credited in the post and on the website: @roscoreckless. Post published 11 December 2025; gallery is labelled London / 2025, not the post date as an event date. All ten appear in the Festival Journey contact sheet, with responsive WebP copies and enlarged views. These are event photographs, not production BTS.

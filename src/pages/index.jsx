@@ -5,6 +5,19 @@ import bios from "../data/bios.json";
 import statement from "../data/statement.json";
 import "../styles/site.css";
 
+const premierePhotos = [
+  "Two guests posing together at the Universe25 UK premiere afterparty",
+  "Guests gathered around a table at Christabel’s",
+  "A group portrait at the Universe25 afterparty",
+  "Friends around a candlelit table at Christabel’s",
+  "A guest in a suit posing for the camera",
+  "The DJ at the Universe25 afterparty",
+  "A guest beside the wood-panelled wall at Christabel’s",
+  "Guests talking at the Universe25 afterparty",
+  "Conversation on the dance floor at Christabel’s",
+  "Two guests raising their glasses at the afterparty",
+].map((alt, i) => ({ id: `premiere-${i + 1}`, alt, festival: true }));
+const premierePost = "https://www.instagram.com/p/DSIh881CIze/";
 const asset = (path) => withPrefix(path);
 const Arrow = () => <span aria-hidden="true">↗</span>;
 const Play = () => (
@@ -333,6 +346,51 @@ export default function Home() {
               </a>
             ))}
           </div>
+          <div className="premiere-journal">
+            <div className="premiere-heading">
+              <div>
+                <p className="eyebrow">LONDON / 2025</p>
+                <h3>After the credits.</h3>
+                <p>
+                  Universe25 UK premiere & afterparty.
+                  <br />
+                  ICA London · Christabel’s Sunday Service
+                </p>
+              </div>
+              <a href={premierePost} target="_blank" rel="noreferrer">
+                View the original post <Arrow />
+              </a>
+            </div>
+            <div className="premiere-grid">
+              {premierePhotos.map((photo, i) => (
+                <button
+                  key={photo.id}
+                  onClick={() => setModal({ type: "image", ...photo })}
+                  aria-label={`Enlarge photo ${i + 1}: ${photo.alt}`}
+                >
+                  <Still
+                    name={photo.id}
+                    alt={photo.alt}
+                    sizes="(max-width: 700px) 45vw, 19vw"
+                  />
+                  <span aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")} <span>↗</span>
+                  </span>
+                </button>
+              ))}
+            </div>
+            <p className="premiere-credit">
+              Photographs by{" "}
+              <a
+                href="https://www.instagram.com/roscoreckless/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @roscoreckless
+              </a>{" "}
+              · With Armenian Film Society London
+            </p>
+          </div>
         </section>
         <section className="statement section">
           <SectionLabel number="06">IN THE DIRECTOR’S WORDS</SectionLabel>
@@ -569,13 +627,19 @@ export default function Home() {
         onCancel={() => setModal(null)}
         onClose={() => setModal(null)}
         aria-label={
-          modal?.type === "image" ? "Film still" : "Universe25 official trailer"
+          modal?.type === "image"
+            ? modal.festival
+              ? "UK premiere and afterparty photograph"
+              : "Film still"
+            : "Universe25 official trailer"
         }
       >
         <div className="dialog-head">
           <span>
             {modal?.type === "image"
-              ? "UNIVERSE25 / FILM STILL"
+              ? modal.festival
+                ? "UNIVERSE25 / UK PREMIERE & AFTERPARTY"
+                : "UNIVERSE25 / FILM STILL"
               : "UNIVERSE25 / OFFICIAL TRAILER"}
           </span>
           <button
@@ -607,9 +671,19 @@ export default function Home() {
             <Still name={modal.id} alt={modal.alt} eager sizes="95vw" />
             <p>
               {modal.alt}{" "}
-              <a href={asset(`/press/${modal.id}.jpg`)} download>
-                Download still ↓
-              </a>
+              {modal.festival ? (
+                <a
+                  href="https://www.instagram.com/roscoreckless/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Photograph by @roscoreckless ↗
+                </a>
+              ) : (
+                <a href={asset(`/press/${modal.id}.jpg`)} download>
+                  Download still ↓
+                </a>
+              )}
             </p>
           </>
         ) : null}
