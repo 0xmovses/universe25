@@ -153,7 +153,6 @@ export default function Home() {
         >
           {[
             ["film", "The film"],
-            ["reviews", "Reviews"],
             ["statement", "Director’s statement"],
             ["stills", "Inside the film"],
             ["behind-the-scenes", "On set"],
@@ -234,10 +233,6 @@ export default function Home() {
         </div>
         <section className="reviews section" id="reviews">
           <SectionLabel number="01">THE WORD OUTSIDE</SectionLabel>
-          <div className="reviews-intro">
-            <h2>In the press.</h2>
-            <p>Critics have found a strange, human story in Mott’s journey. Read their words here, then follow each excerpt to the full review.</p>
-          </div>
           <div className="review-lead">
             <div>
               <span className="score">
@@ -391,7 +386,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <PressAside review={film.reviews.find((r) => r.placement === "gallery")} />
         <section className="festivals section" id="festivals">
           <SectionLabel number="06">ON THE BIG SCREEN</SectionLabel>
           <div className="section-heading">
