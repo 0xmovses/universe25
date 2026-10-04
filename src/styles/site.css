@@ -1112,6 +1112,9 @@ footer > div {
     grid-template-columns: 1fr 1fr;
     gap: 0 25px;
   }
+  .reviews-grid .desktop-review {
+    display: none;
+  }
   .reviews-grid blockquote {
     font-size: 18px;
   }

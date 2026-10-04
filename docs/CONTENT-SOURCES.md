@@ -23,8 +23,12 @@ Only brief attributed quotations are reproduced; every quotation links to the fu
 | Movie-Blogger | Federico Furzan | 3 Mar 2025 | https://www.movie-blogger.com/universe25-2025-film-review/ |
 | UCL Film & TV Society Journal | Edward Lahner | 28 Jan 2026 | https://blog.uclfilm.com/2026/01/28/who-is-my-master-and-how-have-i-come-to-be-universe25-2025-a-spontaneous-sunday-at-the-armenian-film-festival/ |
 | Já Viu? | fabilipo | 22 Feb 2025 | https://javiu.blog/2025/02/22/053-2025-universe-25/?amp=1 |
+| The Moya View | Jonathan Moya | 28 Feb 2025 | https://themoyaview.com/2025/02/28/slamdance-2025/ |
+| HorrorBuzz | Brian Fanelli | 25 Feb 2025 | https://horrorbuzz.com/movies/universe-25-slamdance-2025/ |
 
 Já Viu’s Portuguese quotation is displayed in the original with a clearly labelled English translation. UCL’s excerpt and others are favourable excerpts; the links let readers see the whole assessment, including qualifications. Film Threat’s 9.5/10 belongs to this film; the `/universe-25/` URL is a DIFFERENT film and must not be used.
+
+The Moya View and HorrorBuzz excerpts fill the six-card review grid on desktop only. HorrorBuzz's full review is mixed and scores the film 6/10; its linked excerpt is a short, accurate passage from the closing assessment.
 
 Additional coverage found: The Movie Gourmet’s “2025: 14 new filmmakers to watch” (https://www.themoviegourmet.com/?p=48108); Letterboxd audience reviews (https://letterboxd.com/film/universe-25-2025/reviews/); Film Focus Online’s mixed review (https://www.filmfocusonline.com/post/universe25-review); Sheila Nayar’s Journal of Religion & Film article (https://digitalcommons.unomaha.edu/jrf/vol29/iss1/55/). The last article’s full PDF could not be retrieved, so its sentiment has not been classified and no pull quote is fabricated. Searches cannot establish that every positive review on the internet has been found.
 

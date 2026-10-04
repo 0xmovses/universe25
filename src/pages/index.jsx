@@ -251,7 +251,7 @@ export default function Home() {
           </div>
           <div className="reviews-grid">
             {film.reviews.slice(1).filter((r) => !r.placement).map((r) => (
-              <figure key={r.outlet}>
+              <figure key={r.outlet} className={r.desktopOnly ? "desktop-review" : undefined}>
                 <blockquote lang={r.language}>“{r.quote}”</blockquote>
                 {r.translation && (
                   <p className="translation">{r.translation}</p>
