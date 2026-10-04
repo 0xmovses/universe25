@@ -276,7 +276,7 @@ small,
 }
 .festival-ribbon {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   padding: 33px var(--pad);
   border-bottom: 1px solid var(--line);
   gap: 25px;
@@ -284,7 +284,7 @@ small,
 }
 .festival-ribbon > span {
   font-weight: 700;
-  font-size: clamp(13px, 1.5vw, 21px);
+  font-size: clamp(11px, 1.2vw, 18px);
   letter-spacing: -0.03em;
 }
 .festival-ribbon > span + span {
@@ -1048,8 +1048,15 @@ footer > div {
     min-height: 50px;
   }
   .festival-ribbon {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 25px 15px;
-    gap: 10px;
+    gap: 24px 10px;
+  }
+  .festival-ribbon > span:nth-child(odd) {
+    border-left: 0;
+  }
+  .festival-ribbon > span:last-child {
+    grid-column: 1 / -1;
   }
   .festival-ribbon > span {
     font-size: 10px;

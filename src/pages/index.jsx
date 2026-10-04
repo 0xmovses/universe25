@@ -185,7 +185,7 @@ export default function Home() {
         </section>
         <div
           className="festival-ribbon"
-          aria-label="Selected festival screenings"
+          aria-label="Festival premieres and official selections"
         >
           <span>
             SLAMDANCE <small>WORLD PREMIERE / 2025</small>
@@ -195,6 +195,12 @@ export default function Home() {
           </span>
           <span>
             ARMENIAN FILM FESTIVAL <small>LONDON · ICA / 2025</small>
+          </span>
+          <span>
+            FANTASPOA <small>OFFICIAL SELECTION / 2025</small>
+          </span>
+          <span>
+            POPCORN FRIGHTS <small>OFFICIAL SELECTION / 2025</small>
           </span>
         </div>
         <section className="reviews section" id="reviews">
@@ -323,7 +329,7 @@ export default function Home() {
           <SectionLabel number="05">ON THE BIG SCREEN</SectionLabel>
           <div className="section-heading">
             <h2>Festival journey.</h2>
-            <span className="eyebrow">SCREENING ARCHIVE</span>
+            <span className="eyebrow">PREMIERES & SELECTIONS</span>
           </div>
           <div className="festival-list">
             {film.festivals.map((f, i) => (
