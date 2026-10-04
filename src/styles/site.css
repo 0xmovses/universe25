@@ -1521,18 +1521,20 @@ body::after {
 .section-label > span:first-child::after { content: "]"; }
 .section-label::after { content: ""; flex: 1; border-top: 1px dashed var(--line); margin-left: 12px; }
 .story .section-label { margin-bottom: 38px; }
-.statement { background: #0e120e; border-top: 1px dashed #5a6b52; border-bottom: 1px dashed #5a6b52; }
-.statement > h2 { font-size: clamp(35px, 5vw, 72px); margin-bottom: 55px; }
-.statement-layout { grid-template-columns: 1fr 1fr; gap: 70px; }
-.statement-portrait-column { display: grid; gap: 28px; align-content: start; }
-.statement-portrait-column > a { display: block; width: min(100%, 280px); }
-.statement-portrait-column img { display: block; width: 100%; height: auto; aspect-ratio: 1582 / 1817; object-fit: cover; filter: grayscale(1); }
-.statement-portrait-column > a:hover img { filter: grayscale(.65); }
-.statement .byline a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+.statement { background: #111711; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.statement .section-label { margin-bottom: clamp(60px, 8vw, 115px); }
+.statement .section-label > span:first-child::before,
+.statement .section-label > span:first-child::after,
+.statement .section-label::after { content: none; }
+.statement > h2.statement-quote { max-width: 1200px; margin: 0 0 clamp(70px, 9vw, 130px); font-size: clamp(54px, 8.4vw, 128px); font-weight: 400; line-height: 1.02; letter-spacing: -.055em; }
+.statement .intro { max-width: 1180px; margin: 0 0 56px; font-size: clamp(27px, 4.3vw, 64px); line-height: 1.35; letter-spacing: -.03em; }
+.statement-context { max-width: 1150px; margin: 0; color: #bac2b8; font-size: clamp(18px, 2.55vw, 36px); line-height: 1.55; }
+.statement .byline { margin: clamp(75px, 10vw, 145px) 0 65px; font-size: 15px !important; letter-spacing: .08em; }
+.statement .byline span { display: inline-block; margin-top: 9px; letter-spacing: .04em; }
+.statement .byline a { color: inherit; text-decoration: none; }
 .statement .byline a:hover { color: var(--green); }
-.statement-quote { margin: 0; font-size: clamp(32px, 4vw, 60px); line-height: 1.12; letter-spacing: -.045em; }
-.statement .intro { font-size: 17px; line-height: 1.75; letter-spacing: 0; }
-.statement summary { color: var(--green); font: 12px "Courier New", monospace; }
+.statement details { margin-top: 0; }
+.statement summary { color: var(--fg); font-size: clamp(16px, 2vw, 26px); min-height: 80px; }
 .press { background: var(--bg); border-top: 1px dashed #6a7c60; }
 .press h2 { font-family: "Courier New", monospace; font-size: clamp(38px, 5vw, 66px); font-weight: 400; }
 .press-requests { display: grid; justify-items: start; gap: 12px; }
@@ -1574,11 +1576,12 @@ button.text-link:hover { color: var(--green); }
   .hero-actions { margin-top: 20px; max-width: none; gap: 10px 24px; }
   .hero .button { min-height: 46px; padding: 12px 16px; }
   .hero-actions .text-link { font-size: 11px; }
-  .statement-layout { grid-template-columns: 1fr; gap: 35px; }
-  .statement-portrait-column > a { width: min(100%, 240px); }
-  .statement > h2 { margin-bottom: 35px; }
-  .statement-quote { font-size: 38px; }
-  .statement .intro { font-size: 16px; }
+  .statement .section-label { margin-bottom: 64px; }
+  .statement > h2.statement-quote { margin-bottom: 70px; font-size: clamp(32px, 10.4vw, 70px); }
+  .statement .intro { margin-bottom: 40px; font-size: clamp(24px, 6vw, 38px); }
+  .statement-context { font-size: 18px; }
+  .statement .byline { margin: 75px 0 45px; font-size: 12px !important; }
+  .statement summary { font-size: 16px; min-height: 70px; }
   .bts-contact-sheet { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .header nav .nav-contact { border-top: 1px dashed var(--line); margin-top: 10px; }
 }

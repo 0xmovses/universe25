@@ -293,41 +293,34 @@ export default function Home() {
         </section>
         <PressAside review={film.reviews.find((r) => r.placement === "statement")} />
         <section className="statement section" id="statement" aria-labelledby="statement-title">
-          <SectionLabel number="03">RICHARD MELKONIAN / FIELD NOTES</SectionLabel>
-          <h2 id="statement-title">Director’s statement.</h2>
-          <div className="statement-layout">
-            <div className="statement-portrait-column">
-              <a href="https://www.richardmelkonian.com/" target="_blank" rel="noreferrer" aria-label="Visit Richard Melkonian’s website">
-                <img src={asset("/images/richard-melkonian.webp")} alt="Richard Melkonian" loading="lazy" />
-              </a>
-              <blockquote className="statement-quote">
-                “My primary goal
-                <br />
-                was to conjure
-                <br />
-                <em>an original mood.</em>”
-              </blockquote>
+          <SectionLabel number="03">IN THE DIRECTOR’S WORDS</SectionLabel>
+          <h2 id="statement-title" className="statement-quote">
+            “My primary goal
+            <br />
+            was to conjure
+            <br />
+            <em>an original mood.</em>”
+          </h2>
+          <p className="intro">Music, image and text. A film discovered in the making.</p>
+          <p className="statement-context">
+            Written as it was shot, composed as it was edited: Richard Melkonian’s debut feature grew through a fluid exchange between storytelling, performance and music.
+          </p>
+          <p className="byline">
+            <a href="https://www.richardmelkonian.com/" target="_blank" rel="noreferrer">RICHARD MELKONIAN</a>
+            <br />
+            <span>Writer · Director · Composer</span>
+          </p>
+          <details>
+            <summary>
+              Read the full director’s statement{" "}
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div className="long-copy">
+              {statement.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
             </div>
-            <div>
-              <p className="intro">{statement[0]}</p>
-              <p className="byline">
-                <a href="https://www.richardmelkonian.com/" target="_blank" rel="noreferrer">RICHARD MELKONIAN ↗</a>
-                <br />
-                <span>Writer · Director · Composer</span>
-              </p>
-              <details>
-                <summary>
-                  Read the full director’s statement{" "}
-                  <span aria-hidden="true">+</span>
-                </summary>
-                <div className="long-copy">
-                  {statement.slice(1).map((p) => (
-                    <p key={p}>{p}</p>
-                  ))}
-                </div>
-              </details>
-            </div>
-          </div>
+          </details>
         </section>
         <section className="trailer section" id="trailer">
           <SectionLabel number="04">ENTER THE WORLD</SectionLabel>
