@@ -9,10 +9,9 @@ import "../styles/site.css";
 import Arrow from "../components/Arrow";
 
 const premierePhotos = [
-  { id: "premiere-4", alt: "Guests gathered around a candlelit table at the Universe25 afterparty." },
-  { id: "premiere-6", alt: "The DJ at the Universe25 afterparty." },
-  { id: "premiere-8", alt: "Guests talking at the Universe25 afterparty." },
-  { id: "premiere-9", alt: "Richard Melkonian speaking with guests at the Universe25 afterparty." },
+  { id: "premiere-14", alt: "Guests gathered after the Universe25 UK premiere." },
+  { id: "premiere-10", alt: "Two guests celebrating at the Universe25 afterparty." },
+  { id: "premiere-13", alt: "A closely packed group at the Universe25 afterparty." },
 ].map((photo) => ({ ...photo, festival: true }));
 const btsPhotos = btsGallery.map((photo) => ({ ...photo, bts: true }));
 const redRoomPhotos = redRoomGallery.map((photo) => ({ ...photo, story: true }));
