@@ -464,7 +464,7 @@ export default function Home() {
             <button className="text-link" ref={galleryToggle}
               aria-expanded={galleryOpen} aria-controls="bts-full-gallery"
               onClick={() => setGalleryOpen(!galleryOpen)}>
-              {galleryOpen ? "Close the contact sheet" : `Open the full BTS gallery · ${btsPhotos.length} photographs`}
+              {galleryOpen ? "Close the gallery" : `Open the full BTS gallery · ${btsPhotos.length} photographs`}
               <span aria-hidden="true">{galleryOpen ? "−" : "+"}</span>
             </button>
           </div>
@@ -483,7 +483,7 @@ export default function Home() {
                 setGalleryOpen(false);
                 galleryToggle.current?.focus();
                 galleryToggle.current?.scrollIntoView({ block: "center" });
-              }}>Close the contact sheet <span aria-hidden="true">−</span></button>
+              }}>Close the gallery <span aria-hidden="true">−</span></button>
             </>}
           </div>
         </section>
