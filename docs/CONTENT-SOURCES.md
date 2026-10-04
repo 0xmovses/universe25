@@ -46,3 +46,17 @@ Additional coverage found: The Movie Gourmet’s “2025: 14 new filmmakers to w
 - The Dropbox media alerts (including Factory Fest), flyer, separate key art and stills, and video/audio clips were inventoried but were zero-byte placeholders. Their contents could not yet be audited. The EPK imagery is used in the meantime.
 - Factory Fest cannot be listed as a completed screening based only on a document filename. Add it when the alert or another reliable source is available.
 - Confirm any additional festival screenings, current distribution/watch links, public contact changes, and other social accounts with the filmmaker. No unconfirmed release date or full-film availability claim is on the site.
+
+## Filmmaker update — 4 October 2026
+
+Richard confirmed Universe25 was selected for Fantaspoa 2025 and Popcorn Frights Film Festival 2025 in this chat. Both are displayed as **Official selection · 2025**, without asserting a screening date, premiere status, competition category or award. Festival identity links supplied by Richard and checked: https://filmfreeway.com/Fantaspoa and https://filmfreeway.com/PopcornFrights. Selection evidence is the filmmaker’s direct confirmation; these general festival profiles are not represented as film-specific selection records. Added to both the homepage festival ribbon and festival history.
+
+## Design and contact update — 4 October 2026
+
+Richard requested the comb-across-the-eyes still as the hero, a lighter title, bolder top credits and removal of the added “Sent to save us / Tempted to be us” slogan. The original logline now leads a restrained dark synopsis section; the bright split panel and outlined tags were removed. The public website contact and press ZIP readme now use richard@melkonian.xyz, as explicitly supplied. The downloadable original EPK remains unchanged and retains its historical contact address.
+
+Cast correction supplied by Richard on 4 October 2026: Andre Flynn plays The Master. Added to the website cast credits and generated Movie metadata. The original EPK PDF remains unchanged.
+
+## Biography replacements — 4 October 2026
+
+Richard’s website biography was replaced with his supplied IMDb mini biography, preserving the supplied wording (including the Summer 2026 release statement) and author attribution. Acquisition and release wording is filmmaker-supplied, not independently reverified here. Giacomo’s older EPK biography was replaced by a concise adaptation of https://www.giacomogex.com/about-3, read on 4 October 2026, with a visible source link. The page gives no update date; its documentary project is described as information on his website rather than asserted as independently current. Original EPK downloads remain archival copies.

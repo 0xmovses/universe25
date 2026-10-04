@@ -134,8 +134,8 @@ export default function Home() {
       <main id="main">
         <section className="hero" aria-labelledby="film-title">
           <Still
-            name="mott-lamb"
-            alt="Mott holds a lamb on the bank of the Thames in a black-and-white frame from Universe25."
+            name="mirror"
+            alt="Mott holds a hair comb across his eyes in Universe25."
             className="hero-image"
             eager
             sizes="100vw"
@@ -154,18 +154,11 @@ export default function Home() {
             </span>
           </div>
           <div className="hero-content">
-            <p className="eyebrow">
-              AN ANGEL. THREE TASKS. THE END OF THE WORLD.
-            </p>
             <h1 id="film-title">
               UNIVERSE<span>25</span>
             </h1>
             <div className="hero-bottom">
-              <p>
-                An angel from the future.
-                <br />
-                An all-too-human world.
-              </p>
+              <p>{film.logline}</p>
               <div className="hero-actions">
                 <button
                   className="button green"
@@ -185,7 +178,7 @@ export default function Home() {
         </section>
         <div
           className="festival-ribbon"
-          aria-label="Selected festival screenings"
+          aria-label="Festival premieres and official selections"
         >
           <span>
             SLAMDANCE <small>WORLD PREMIERE / 2025</small>
@@ -195,6 +188,12 @@ export default function Home() {
           </span>
           <span>
             ARMENIAN FILM FESTIVAL <small>LONDON · ICA / 2025</small>
+          </span>
+          <span>
+            FANTASPOA <small>OFFICIAL SELECTION / 2025</small>
+          </span>
+          <span>
+            POPCORN FRIGHTS <small>OFFICIAL SELECTION / 2025</small>
           </span>
         </div>
         <section className="reviews section" id="reviews">
@@ -239,13 +238,8 @@ export default function Home() {
         </section>
         <section className="story" id="film">
           <div className="story-copy">
-            <SectionLabel number="02">THE FILM</SectionLabel>
-            <h2>
-              Sent to save us.
-              <br />
-              <em>Tempted to be us.</em>
-            </h2>
-            <p className="intro">{film.logline}</p>
+            <p className="eyebrow">THE FILM</p>
+            <h2>{film.logline}</h2>
             {film.synopsis.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -323,7 +317,7 @@ export default function Home() {
           <SectionLabel number="05">ON THE BIG SCREEN</SectionLabel>
           <div className="section-heading">
             <h2>Festival journey.</h2>
-            <span className="eyebrow">SCREENING ARCHIVE</span>
+            <span className="eyebrow">PREMIERES & SELECTIONS</span>
           </div>
           <div className="festival-list">
             {film.festivals.map((f, i) => (
@@ -400,6 +394,21 @@ export default function Home() {
                     {b.paragraphs.slice(1).map((p) => (
                       <p key={p}>{p}</p>
                     ))}
+                    {b.attribution && (
+                      <p className="source-note">
+                        {b.sourceUrl ? (
+                          <a
+                            href={b.sourceUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {b.attribution} ↗
+                          </a>
+                        ) : (
+                          b.attribution
+                        )}
+                      </p>
+                    )}
                   </div>
                 </details>
               </article>
@@ -430,8 +439,9 @@ export default function Home() {
             </div>
           </div>
           <p className="source-note">
-            Biographies and credits adapted from the film’s original electronic
-            press kit.
+            Richard’s biography supplied by the filmmaker; Giacomo’s adapted
+            from his official website. Other biographies and credits follow the
+            original press kit.
           </p>
         </section>
         <section className="press section" id="press">
@@ -662,7 +672,7 @@ export function Head({ data }) {
       <meta property="og:image:height" content="630" />
       <meta
         property="og:image:alt"
-        content="Mott holding a lamb by the Thames in Universe25"
+        content="Mott holding a hair comb across his eyes in Universe25"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />

@@ -1,7 +1,7 @@
 {
   "title": "Universe25",
   "director": "Richard Melkonian",
-  "email": "richard@entropy-films.co.uk",
+  "email": "richard@melkonian.xyz",
   "instagram": "https://www.instagram.com/richard_melkonian/",
   "trailer": "https://www.youtube.com/watch?v=i_0Imx6azDg",
   "trailerId": "i_0Imx6azDg",
@@ -23,6 +23,7 @@
   ],
   "cast": [
     ["Giacomo Gex", "Mott / Tom"],
+    ["Andre Flynn", "The Master"],
     ["Dan Sociu", "Andre"],
     ["Tania Khan", "Jocasta"],
     ["Jacob Meadows", "Jacob · Young Postman"],
@@ -64,6 +65,20 @@
       "date": "7 December 2025",
       "label": "UK premiere · Screening + director Q&A",
       "url": "https://ica.art/films/universe25"
+    },
+    {
+      "name": "Fantaspoa — International Fantastic Film Festival of Porto Alegre",
+      "location": "Porto Alegre, Brazil",
+      "date": "2025",
+      "label": "Official selection",
+      "url": "https://filmfreeway.com/Fantaspoa"
+    },
+    {
+      "name": "Popcorn Frights Film Festival",
+      "location": "Florida, USA",
+      "date": "2025",
+      "label": "Official selection",
+      "url": "https://filmfreeway.com/PopcornFrights"
     }
   ],
   "reviews": [
