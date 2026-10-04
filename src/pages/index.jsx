@@ -580,7 +580,7 @@ export default function Home() {
           <p className="source-note">
             Richard’s biography supplied by the filmmaker; Giacomo’s adapted
             from his official website. Other biographies and credits follow the
-            original press kit.
+            original press kit, with filmmaker supplied credit corrections and additions.
           </p>
         </section>
         <section className="press section" id="press">
