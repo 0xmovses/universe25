@@ -63,7 +63,7 @@ Richard’s website biography was replaced with his supplied IMDb mini biography
 
 ## UK premiere photographs — 4 October 2026
 
-Ten photographs supplied by the filmmaker in Downloads as `igexport-DSIh881CIze*.jpg`, from https://www.instagram.com/p/DSIh881CIze/. Caption identifies Universe25 UK Premiere & Afterparty, Christabel’s Sunday Service, Armenian Film Society London and ICA London. Photographer credited in the post and on the website: @roscoreckless. Post published 11 December 2025; gallery is labelled London / 2025, not the post date as an event date. All ten appear in the Festival Journey contact sheet, with responsive WebP copies and enlarged views. These are event photographs, not production BTS.
+Ten photographs supplied by the filmmaker in Downloads as `igexport-DSIh881CIze*.jpg`, from https://www.instagram.com/p/DSIh881CIze/. Caption identifies Universe25 UK Premiere & Afterparty, Christabel’s Sunday Service, Armenian Film Society London and ICA London. Photographer credited in the post and on the website: @roscoreckless. Post published 11 December 2025; gallery is labelled London / 2025, not the post date as an event date. Four selected photographs appear in the Festival Journey gallery, with responsive WebP copies and enlarged views. These are event photographs, not production BTS.
 
 ## Hero and production BTS update — 4 October 2026
 
@@ -71,7 +71,7 @@ The hero title is smaller, heavier and italic, with a hard offset shadow. A dedi
 
 Google Drive was searched for `BTS Universe25` through the filmmaker’s signed-in browser. The shared `Universe25 BTS` folder (`17-ZDEvsAzCZx9atFYdrN-eYDsFq_6fuR`) contains production photographs. `P1010619.JPG`, `P1010622.JPG` and `P1010624.JPG` were downloaded and used for a three-image production BTS gallery. No photographer credit was available in the inspected folder; none is invented. The folder’s access permissions were not changed and its private navigation link is not published on the site.
 
-The afterparty gallery is reduced to four selected photographs (original items 1, 3, 4 and 6). Visible credits now include AFS London (Armenian Film Society London), Armenian Film Festival London, Christabel’s Sunday Service, ICA London and photographer @roscoreckless. Production BTS is separate from the event photographs.
+The afterparty gallery uses four selected photographs (original items 4, 6, 8 and 9) for a wider mix of table, DJ and candid scenes. Visible credits include AFS London (Armenian Film Society London), Armenian Film Festival London, Christabel’s Sunday Service, ICA London and photographer @roscoreckless. Production BTS is separate from the event photographs.
 
 
 ## Audience, press and full BTS gallery — 4 October 2026

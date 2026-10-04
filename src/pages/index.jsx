@@ -8,17 +8,11 @@ import "../styles/site.css";
 import Arrow from "../components/Arrow";
 
 const premierePhotos = [
-  "Two guests posing together at the Universe25 UK premiere afterparty",
-  "Guests gathered around a table at Christabel’s",
-  "A group portrait at the Universe25 afterparty",
-  "Friends around a candlelit table at Christabel’s",
-  "A guest in a suit posing for the camera",
-  "The DJ at the Universe25 afterparty",
-  "A guest beside the wood-panelled wall at Christabel’s",
-  "Guests talking at the Universe25 afterparty",
-  "Conversation on the dance floor at Christabel’s",
-  "Two guests raising their glasses at the afterparty",
-].map((alt, i) => ({ id: `premiere-${i + 1}`, alt, festival: true })).filter((_, i) => [0, 2, 3, 5].includes(i));
+  { id: "premiere-4", alt: "Guests gathered around a candlelit table at the Universe25 afterparty." },
+  { id: "premiere-6", alt: "The DJ at the Universe25 afterparty." },
+  { id: "premiere-8", alt: "Guests talking at the Universe25 afterparty." },
+  { id: "premiere-9", alt: "Richard Melkonian speaking with guests at the Universe25 afterparty." },
+].map((photo) => ({ ...photo, festival: true }));
 const btsPhotos = btsGallery.map((photo) => ({ ...photo, bts: true }));
 const premierePost = "https://www.instagram.com/p/DSIh881CIze/";
 const asset = (path) => withPrefix(path);
