@@ -6,6 +6,7 @@ const film = require("../src/data/film.json");
 const bios = require("../src/data/bios.json");
 const statement = require("../src/data/statement.json");
 const bts = require("../src/data/bts.json");
+const redRoom = require("../src/data/redRoom.json");
 const root = path.join(__dirname, "..");
 test("the four biographies and full director statement are present", () => {
   assert.deepEqual(
@@ -59,10 +60,18 @@ test("all responsive still and portrait variants exist", () => {
     ...film.gallery.map((g) => g.id),
     ...bios.map((b) => b.id),
     ...bts.map((photo) => photo.id),
+    ...redRoom.map((photo) => photo.id),
     "mott-lamb",
   ])
     for (const w of [640, 1280, 1920])
       assert.ok(
         fs.statSync(path.join(root, `static/images/${id}-${w}.webp`)).size > 0,
       );
+});
+test("the red-room sequence follows the eight-image post and identifies its sources", () => {
+  assert.equal(redRoom.length, 8);
+  assert.equal(redRoom.at(-1).sourceFile, "Instagram carousel image 8");
+  for (const photo of redRoom.slice(0, 7)) {
+    assert.equal(bts.find((item) => item.id === photo.id)?.sourceFile, photo.sourceFile);
+  }
 });

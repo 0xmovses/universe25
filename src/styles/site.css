@@ -1547,6 +1547,22 @@ button.text-link:hover { color: var(--green); }
 .gallery-close { margin-top: 30px; }
 .viewer-navigation { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 16px; font: 12px "Courier New", monospace; }
 .viewer-navigation button { background: none; border-bottom: 1px solid var(--line); min-height: 44px; padding: 10px; color: var(--green); }
+.red-room { border-top: 1px solid var(--line); }
+.red-room-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; margin: 44px 0 48px; }
+.red-room-intro h2 { font-size: clamp(48px, 7vw, 104px); line-height: .95; letter-spacing: -.06em; margin: 12px 0 0; }
+.red-room-intro p:not(.eyebrow) { max-width: 570px; line-height: 1.7; color: var(--muted); }
+.red-room-intro .text-link { display: inline-flex; align-items: center; gap: 10px; color: var(--green); font: 12px "Courier New", monospace; margin-top: 8px; }
+.red-room-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 16px; }
+.red-room-grid button { padding: 0; background: transparent; color: inherit; text-align: left; }
+.red-room-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: filter .3s; }
+.red-room-grid button:hover img { filter: brightness(1.17); }
+.red-room-grid button > span { display: block; margin-top: 9px; color: var(--muted); font: 11px/1.5 "Courier New", monospace; }
+.red-room-grid button b { color: var(--green); font-weight: 400; margin-right: 7px; }
+.red-room-note { margin: 30px 0 0; color: var(--muted); font: 11px "Courier New", monospace; }
+@media (max-width: 760px) {
+  .red-room-intro { grid-template-columns: 1fr; gap: 16px; margin: 35px 0; }
+  .red-room-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 12px; }
+}
 @media (max-width: 1100px) { .hero-bottom { align-items: flex-start; } .hero-actions { max-width: 240px; gap: 10px; } }
 @media (max-width: 760px) {
   .hero-content { bottom: 45px; }

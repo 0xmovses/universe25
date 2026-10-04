@@ -4,6 +4,7 @@ import film from "../data/film.json";
 import bios from "../data/bios.json";
 import statement from "../data/statement.json";
 import btsGallery from "../data/bts.json";
+import redRoomGallery from "../data/redRoom.json";
 import "../styles/site.css";
 import Arrow from "../components/Arrow";
 
@@ -14,7 +15,9 @@ const premierePhotos = [
   { id: "premiere-9", alt: "Richard Melkonian speaking with guests at the Universe25 afterparty." },
 ].map((photo) => ({ ...photo, festival: true }));
 const btsPhotos = btsGallery.map((photo) => ({ ...photo, bts: true }));
+const redRoomPhotos = redRoomGallery.map((photo) => ({ ...photo, story: true }));
 const premierePost = "https://www.instagram.com/p/DSIh881CIze/";
+const redRoomPost = "https://www.instagram.com/p/DaQwd0rjkgi/";
 const asset = (path) => withPrefix(path);
 const Play = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -92,9 +95,10 @@ export default function Home() {
   }, [modal]);
   function stepPhoto(direction) {
     setModal((current) => {
-      const index = btsPhotos.findIndex((photo) => photo.id === current?.id);
+      const photos = current?.story ? redRoomPhotos : btsPhotos;
+      const index = photos.findIndex((photo) => photo.id === current?.id);
       if (index < 0) return current;
-      return { type: "image", ...btsPhotos[(index + direction + btsPhotos.length) % btsPhotos.length] };
+      return { type: "image", ...photos[(index + direction + photos.length) % photos.length] };
     });
   }
   async function copy(text, label) {
@@ -490,8 +494,32 @@ export default function Home() {
             </>}
           </div>
         </section>
+        <section className="red-room section" id="red-room" aria-labelledby="red-room-title">
+          <SectionLabel number="08">FROM THE SET / JOCASTA</SectionLabel>
+          <div className="red-room-intro">
+            <div>
+              <p className="eyebrow">A ROOM BUILT FOR A SCENE</p>
+              <h2 id="red-room-title">The red room.</h2>
+            </div>
+            <div>
+              <p>For Mott and Jocasta’s hotel-room scene, the production built its own red-walled room inside a warehouse in Kent. The set gave the team control over the light, colour and space around the performers.</p>
+              <p>Follow the room from construction and rehearsal to a frame from the finished film.</p>
+              <a className="text-link" href={redRoomPost} target="_blank" rel="noreferrer">Richard’s original on-set post <Arrow /></a>
+            </div>
+          </div>
+          <div className="red-room-grid">
+            {redRoomPhotos.map((photo, i) => (
+              <button key={photo.id} onClick={() => setModal({ type: "image", ...photo })}
+                aria-label={`Enlarge red-room image ${i + 1}: ${photo.alt}`}>
+                <Still name={photo.id} alt={photo.alt} sizes="(max-width: 700px) 45vw, 24vw" />
+                <span><b>{String(i + 1).padStart(2, "0")}</b> {photo.caption}</span>
+              </button>
+            ))}
+          </div>
+          <p className="red-room-note">01–07 / behind the scenes · 08 / frame from the film</p>
+        </section>
         <section className="people section" id="people">
-          <SectionLabel number="08">THE PEOPLE BEHIND THE FILM</SectionLabel>
+          <SectionLabel number="09">THE PEOPLE BEHIND THE FILM</SectionLabel>
           <h2>Cast & crew.</h2>
           <div className="people-grid">
             {bios.map((b) => (
@@ -563,7 +591,7 @@ export default function Home() {
           </p>
         </section>
         <section className="press section" id="press">
-          <SectionLabel number="09">PRESS / CONTACT & MATERIALS</SectionLabel>
+          <SectionLabel number="10">PRESS / CONTACT & MATERIALS</SectionLabel>
           <div className="press-layout">
             <div>
               <h2>Press.</h2>
@@ -675,7 +703,7 @@ export default function Home() {
           modal?.type === "image" ? "media-dialog image-dialog" : "media-dialog"
         }
         onKeyDown={(event) => {
-          if (!modal?.bts) return;
+          if (!modal?.bts && !modal?.story) return;
           if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
             event.preventDefault();
             stepPhoto(event.key === "ArrowRight" ? 1 : -1);
@@ -685,7 +713,9 @@ export default function Home() {
         onClose={() => setModal(null)}
         aria-label={
           modal?.type === "image"
-            ? modal.bts
+            ? modal.story
+              ? "Red room image"
+              : modal.bts
               ? "Behind-the-scenes photograph"
               : modal.festival
               ? "UK premiere and afterparty photograph"
@@ -696,7 +726,9 @@ export default function Home() {
         <div className="dialog-head">
           <span>
             {modal?.type === "image"
-              ? modal.bts
+              ? modal.story
+                ? "UNIVERSE25 / THE RED ROOM"
+                : modal.bts
                 ? "UNIVERSE25 / BEHIND THE SCENES"
                 : modal.festival
                 ? "UNIVERSE25 / UK PREMIERE & AFTERPARTY"
@@ -730,14 +762,14 @@ export default function Home() {
         ) : modal?.type === "image" ? (
           <>
             <Still name={modal.id} alt={modal.alt} eager sizes="95vw" />
-            {modal.bts && <div className="viewer-navigation">
-              <button onClick={() => stepPhoto(-1)} aria-label="Previous BTS photograph">← Previous</button>
-              <span role="status">{btsPhotos.findIndex((photo) => photo.id === modal.id) + 1} / {btsPhotos.length}</span>
-              <button onClick={() => stepPhoto(1)} aria-label="Next BTS photograph">Next →</button>
+            {(modal.bts || modal.story) && <div className="viewer-navigation">
+              <button onClick={() => stepPhoto(-1)} aria-label="Previous image">← Previous</button>
+              <span role="status">{(modal.story ? redRoomPhotos : btsPhotos).findIndex((photo) => photo.id === modal.id) + 1} / {(modal.story ? redRoomPhotos : btsPhotos).length}</span>
+              <button onClick={() => stepPhoto(1)} aria-label="Next image">Next →</button>
             </div>}
             <p>
               {modal.alt}{" "}
-              {modal.bts ? null : modal.festival ? (
+              {modal.bts || modal.story ? null : modal.festival ? (
                 <a
                   href="https://www.instagram.com/roscoreckless/"
                   target="_blank"

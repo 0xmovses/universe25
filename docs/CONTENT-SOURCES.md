@@ -90,3 +90,9 @@ At the filmmaker’s request, the hero title is upright and the 2 in 25 is raise
 ## Key stills — 4 October 2026
 
 The filmmaker identified `images/Universe25_2.jpg` and `images/Universe25_5.jpg` as key images. Both appear in the four-image film grid: the first is the close-up of the couple, and the second replaces the repeated comb still. The telephone still appears beside the synopsis. Responsive WebP derivatives were regenerated from those supplied files; `Universe25_2.jpg` was added to the press downloads and ZIP. The comb remains the hero. The original Dropbox files were not changed.
+
+## Red hotel-room sequence — 4 October 2026
+
+Richard supplied https://www.instagram.com/p/DaQwd0rjkgi/ and asked for its images in the gallery and more. The post shows seven production photographs followed by one finished film frame. The first seven were matched visually, in post order, to `DSC03514.jpg`, `DSC00355.jpeg`, `DSC01911.jpeg`, `DSC02890.jpeg`, `DSC01573.jpeg`, `DSC02625.jpeg`, and `DSC02866.jpeg` in the Google Drive `BTS Selects Jocasta` folder (`1usw7NzDWTWOG2U1vmVqUXq6KIZzg71-v`). These originals were used for local responsive derivatives and added to the BTS contact sheet. Original downloads remain outside the repository.
+
+The eighth image is a frame from the finished film. It was not found among the nearby `Film Selects - ungraded` Drive files or the supplied Dropbox stills, so its responsive derivatives were made from the image visible in Richard's Instagram post. The site presents all eight images in post order in a separate red-room story, identifies the last as a film frame, and links to the post. The set and location details in the accompanying text are from Richard's caption. No photographer attribution was supplied for the Drive BTS images; none is invented.

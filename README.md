@@ -33,7 +33,8 @@ The GitHub Actions workflow deploys `public/` with Pages. Configure Pages to use
 
 - `src/data/film.json`: synopsis, contact, social links, cast, credits, festivals, reviews and technical facts.
 - `src/data/bios.json`: website biographies.
-- `src/data/bts.json`: the 126-photo production gallery and source filenames.
+- `src/data/bts.json`: the production gallery and source filenames.
+- `src/data/redRoom.json`: the eight-image red-room story and source order.
 - `src/data/statement.json`: director’s statement.
 - `src/pages/index.jsx`: page and interactions.
 - `src/styles/site.css`: responsive EPK-inspired design.
