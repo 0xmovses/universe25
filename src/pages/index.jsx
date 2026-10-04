@@ -394,6 +394,21 @@ export default function Home() {
                     {b.paragraphs.slice(1).map((p) => (
                       <p key={p}>{p}</p>
                     ))}
+                    {b.attribution && (
+                      <p className="source-note">
+                        {b.sourceUrl ? (
+                          <a
+                            href={b.sourceUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {b.attribution} ↗
+                          </a>
+                        ) : (
+                          b.attribution
+                        )}
+                      </p>
+                    )}
                   </div>
                 </details>
               </article>
@@ -424,8 +439,9 @@ export default function Home() {
             </div>
           </div>
           <p className="source-note">
-            Biographies and credits adapted from the film’s original electronic
-            press kit.
+            Richard’s biography supplied by the filmmaker; Giacomo’s adapted
+            from his official website. Other biographies and credits follow the
+            original press kit.
           </p>
         </section>
         <section className="press section" id="press">
