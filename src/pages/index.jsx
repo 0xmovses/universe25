@@ -16,7 +16,12 @@ const premierePhotos = [
   "Guests talking at the Universe25 afterparty",
   "Conversation on the dance floor at Christabel’s",
   "Two guests raising their glasses at the afterparty",
-].map((alt, i) => ({ id: `premiere-${i + 1}`, alt, festival: true }));
+].map((alt, i) => ({ id: `premiere-${i + 1}`, alt, festival: true })).filter((_, i) => [0, 2, 3, 5].includes(i));
+const btsPhotos = [
+  { id: "bts-set", alt: "The paper-strewn room and dressing table on the Universe25 set." },
+  { id: "bts-camera", alt: "A camera operator frames a scene on the Universe25 set." },
+  { id: "bts-crew", alt: "Cast and crew prepare a shot beside the camera monitor on Universe25." },
+].map((photo) => ({ ...photo, bts: true }));
 const premierePost = "https://www.instagram.com/p/DSIh881CIze/";
 const asset = (path) => withPrefix(path);
 const Arrow = () => <span aria-hidden="true">↗</span>;
@@ -31,12 +36,13 @@ function Still({
   className = "",
   eager = false,
   sizes = "(max-width: 700px) 100vw, 50vw",
+  widths = [640, 1280, 1920],
 }) {
   return (
     <img
       className={className}
       src={asset(`/images/${name}-1280.webp`)}
-      srcSet={[640, 1280, 1920]
+      srcSet={widths
         .map((w) => `${asset(`/images/${name}-${w}.webp`)} ${w}w`)
         .join(", ")}
       sizes={sizes}
@@ -147,7 +153,8 @@ export default function Home() {
       <main id="main">
         <section className="hero" aria-labelledby="film-title">
           <Still
-            name="mirror"
+            name="mirror-hero"
+            widths={[640, 1280, 1920, 2834]}
             alt="Mott holds a hair comb across his eyes in Universe25."
             className="hero-image"
             eager
@@ -371,7 +378,7 @@ export default function Home() {
                   <Still
                     name={photo.id}
                     alt={photo.alt}
-                    sizes="(max-width: 700px) 45vw, 19vw"
+                    sizes="(max-width: 700px) 45vw, 23vw"
                   />
                   <span aria-hidden="true">
                     {String(i + 1).padStart(2, "0")} <span>↗</span>
@@ -388,12 +395,31 @@ export default function Home() {
               >
                 @roscoreckless
               </a>{" "}
-              · With Armenian Film Society London
+              · AFS London (Armenian Film Society London) · Armenian Film Festival London
+              · Christabel’s Sunday Service · ICA London
             </p>
           </div>
         </section>
+        <section className="bts section" id="behind-the-scenes">
+          <SectionLabel number="06">BEHIND THE SCENES</SectionLabel>
+          <div className="section-heading">
+            <h2>Before the frame.</h2>
+            <span className="eyebrow">ON SET / UNIVERSE25</span>
+          </div>
+          <div className="gallery-grid bts-grid">
+            {btsPhotos.map((photo, i) => (
+              <button key={photo.id}
+                onClick={() => setModal({ type: "image", ...photo })}
+                aria-label={`Enlarge behind-the-scenes photo ${i + 1}: ${photo.alt}`}>
+                <Still name={photo.id} alt={photo.alt}
+                  sizes="(max-width: 700px) 100vw, 31vw" />
+                <span><span>0{i + 1} / ON SET</span><span aria-hidden="true">↗</span></span>
+              </button>
+            ))}
+          </div>
+        </section>
         <section className="statement section">
-          <SectionLabel number="06">IN THE DIRECTOR’S WORDS</SectionLabel>
+          <SectionLabel number="07">IN THE DIRECTOR’S WORDS</SectionLabel>
           <div className="statement-layout">
             <h2>
               “My primary goal
@@ -431,7 +457,7 @@ export default function Home() {
           </div>
         </section>
         <section className="people section" id="people">
-          <SectionLabel number="07">THE PEOPLE BEHIND THE FILM</SectionLabel>
+          <SectionLabel number="08">THE PEOPLE BEHIND THE FILM</SectionLabel>
           <h2>A shared vision.</h2>
           <div className="people-grid">
             {bios.map((b) => (
@@ -503,7 +529,7 @@ export default function Home() {
           </p>
         </section>
         <section className="press section" id="press">
-          <SectionLabel number="08">FOR PRESS & CREATORS</SectionLabel>
+          <SectionLabel number="09">FOR PRESS & CREATORS</SectionLabel>
           <div className="press-layout">
             <div>
               <h2>
@@ -628,7 +654,9 @@ export default function Home() {
         onClose={() => setModal(null)}
         aria-label={
           modal?.type === "image"
-            ? modal.festival
+            ? modal.bts
+              ? "Behind-the-scenes photograph"
+              : modal.festival
               ? "UK premiere and afterparty photograph"
               : "Film still"
             : "Universe25 official trailer"
@@ -637,7 +665,9 @@ export default function Home() {
         <div className="dialog-head">
           <span>
             {modal?.type === "image"
-              ? modal.festival
+              ? modal.bts
+                ? "UNIVERSE25 / BEHIND THE SCENES"
+                : modal.festival
                 ? "UNIVERSE25 / UK PREMIERE & AFTERPARTY"
                 : "UNIVERSE25 / FILM STILL"
               : "UNIVERSE25 / OFFICIAL TRAILER"}
@@ -671,7 +701,7 @@ export default function Home() {
             <Still name={modal.id} alt={modal.alt} eager sizes="95vw" />
             <p>
               {modal.alt}{" "}
-              {modal.festival ? (
+              {modal.bts ? null : modal.festival ? (
                 <a
                   href="https://www.instagram.com/roscoreckless/"
                   target="_blank"
