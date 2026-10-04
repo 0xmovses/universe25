@@ -1504,6 +1504,12 @@ body::after {
 .statement { background: #0e120e; border-top: 1px dashed #5a6b52; border-bottom: 1px dashed #5a6b52; }
 .statement > h2 { font-size: clamp(35px, 5vw, 72px); margin-bottom: 55px; }
 .statement-layout { grid-template-columns: 1fr 1fr; gap: 70px; }
+.statement-portrait-column { display: grid; gap: 28px; align-content: start; }
+.statement-portrait-column > a { display: block; width: min(100%, 370px); }
+.statement-portrait-column img { display: block; width: 100%; height: auto; aspect-ratio: 1582 / 1817; object-fit: cover; filter: grayscale(1); }
+.statement-portrait-column > a:hover img { filter: grayscale(.65); }
+.statement .byline a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+.statement .byline a:hover { color: var(--green); }
 .statement-quote { margin: 0; font-size: clamp(32px, 4vw, 60px); line-height: 1.12; letter-spacing: -.045em; }
 .statement .intro { font-size: 17px; line-height: 1.75; letter-spacing: 0; }
 .statement summary { color: var(--green); font: 12px "Courier New", monospace; }
@@ -1533,6 +1539,7 @@ button.text-link:hover { color: var(--green); }
   .hero .button { min-height: 46px; padding: 12px 16px; }
   .hero-actions .text-link { font-size: 11px; }
   .statement-layout { grid-template-columns: 1fr; gap: 35px; }
+  .statement-portrait-column > a { width: min(100%, 300px); }
   .statement > h2 { margin-bottom: 35px; }
   .statement-quote { font-size: 38px; }
   .statement .intro { font-size: 16px; }
