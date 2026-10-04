@@ -8,7 +8,7 @@ The requested Dropbox folder initially contained zero-byte Dropbox placeholders.
 
 The footer’s transparent “Shot on Kodak Film” logo was extracted from page 13 of the supplied EPK, preserving its original artwork. The EPK also credits Cinelab UK for film processing and scanning, and identifies Giacomo Gex with additional cinematography; those credits appear on the site. No other crew names beyond the EPK’s main creative credits and production credits are inferred.
 
-Every EPK biography is included, with grammar corrections. Richard’s Slamdance premiere is now past tense, verified against the festival programme. Giacomo’s then-upcoming project is expressly dated to the EPK rather than silently presented as a current project. Credit spellings follow the EPK: the British Council differs on editor Tomasso/Tommaso Gallone and sound credits, so no silent source substitution was made.
+Every EPK biography is included, with grammar corrections. Richard’s Slamdance premiere is now past tense, verified against the festival programme. Giacomo’s then-upcoming project is expressly dated to the EPK rather than silently presented as a current project. The editor credit now reads Tommaso Gallone, corrected by the filmmaker on 4 October 2026; the earlier EPK spelling was Tomasso. Other credit spellings follow the EPK.
 
 `Universe25xLOST-long.pdf` was also read from a downloaded copy. It is an event proposal with provisional details, not proof that a screening occurred. Proposed LOST screening dates, guests and release claims are not published as confirmed events. No private proposal is included in the public assets.
 
