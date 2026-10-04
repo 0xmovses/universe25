@@ -411,7 +411,6 @@ export default function Home() {
             <div className="premiere-heading">
               <div>
                 <p className="eyebrow">LONDON / 2025</p>
-                <h3>After the credits.</h3>
                 <p>
                   Universe25 UK premiere & afterparty.
                   <br />
@@ -457,7 +456,6 @@ export default function Home() {
         <section className="bts section" id="behind-the-scenes">
           <SectionLabel number="07">BEHIND THE SCENES</SectionLabel>
           <div className="section-heading">
-            <h2>Before the frame.</h2>
             <span className="eyebrow">PRODUCTION PHOTOGRAPHS / {btsPhotos.length} FRAGMENTS</span>
           </div>
           <div className="gallery-grid bts-grid">
