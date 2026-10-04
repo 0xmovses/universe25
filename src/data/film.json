@@ -1,33 +1,141 @@
 {
-  "title":"Universe25",
-  "director":"Richard Melkonian",
-  "email":"richard@entropy-films.co.uk",
-  "instagram":"https://www.instagram.com/richard_melkonian/",
-  "trailer":"https://www.youtube.com/watch?v=i_0Imx6azDg",
-  "trailerId":"i_0Imx6azDg",
-  "logline":"An angel from the future is sent to Earth on a holy mission: find the saint, the sacrificial lamb, and write a scroll.",
-  "synopsis":["A young postman sorting lost mail opens a letter from an author who claims to be an angel from the future. In its pages, the fallen angel Mott tells his story.","Through a series of cryptic phone calls, an unknown entity gives Mott three tasks to complete before the next Sabbath, when the world will end: find the saint who does not know he is holy; find the sacrificial lamb and offer its blood; and write a scroll recording everything he sees.","His journey takes him through London and Bucharest. As he attempts to fulfil his master’s wishes, Mott becomes disillusioned with his mission and longs to become human, even if it means giving up his immortality. But who is the author, and how much of his story can be believed? It falls to the postman to get Mott’s message to its intended destination."],
-  "facts":[["Running time","84 minutes"],["Production","United Kingdom / Romania"],["Shot on","16mm Kodak film"],["Languages","English & Romanian"],["Subtitles","English"],["Screening format","2K DCP · 24 fps · 5.1 surround"],["Picture","Colour & black and white"],["Production company","Entropy Films"]],
-  "cast":[["Giacomo Gex","Mott / Tom"],["Dan Sociu","Andre"],["Tania Khan","Jocasta"],["Jacob Meadows","Jacob · Young Postman"],["Alec Christie","Chris · Boss Postman"],["Alex Bogdan","Darius"],["Ana-Maria Guran","Perriot"],["Maria Forrester","Alina"]],
-  "credits":[["Writer, director, composer & producer","Richard Melkonian"],["Director of photography","Juanjo L. Salazar"],["Production & costume designer","Elodie Chiper"],["Co-producers","Giacomo Gex · Elodie Chiper"],["Editor","Tomasso Gallone"],["Sound designer","Srdjan Krupjel"],["Colourist","Darren Rae"],["1st assistant director","Josh Jacobs"],["1st assistant camera","Bernat Bonaventura"],["Film processing & scanning","Cinelab UK"]],
-  "festivals":[
-    {"name":"Slamdance Film Festival","location":"Los Angeles, USA","date":"23–24 February 2025","label":"World premiere · Narrative Feature","url":"https://slamdance.com/wp-content/uploads/2025/02/Slamdance-25-Program-1.pdf"},
-    {"name":"Chattanooga Film Festival","location":"Chattanooga, USA / virtual programme","date":"2025","label":"Festival selection","url":"https://scarevalue.com/chattanooga-film-festival-2025-round-up/"},
-    {"name":"Armenian Film Festival London","location":"Institute of Contemporary Arts, London","date":"7 December 2025","label":"UK premiere · Screening + director Q&A","url":"https://ica.art/films/universe25"}
+  "title": "Universe25",
+  "director": "Richard Melkonian",
+  "email": "richard@entropy-films.co.uk",
+  "instagram": "https://www.instagram.com/richard_melkonian/",
+  "trailer": "https://www.youtube.com/watch?v=i_0Imx6azDg",
+  "trailerId": "i_0Imx6azDg",
+  "logline": "An angel from the future is sent to Earth on a holy mission: find the saint, the sacrificial lamb, and write a scroll.",
+  "synopsis": [
+    "A young postman sorting lost mail opens a letter from an author who claims to be an angel from the future. In its pages, the fallen angel Mott tells his story.",
+    "Through a series of cryptic phone calls, an unknown entity gives Mott three tasks to complete before the next Sabbath, when the world will end: find the saint who does not know he is holy; find the sacrificial lamb and offer its blood; and write a scroll recording everything he sees.",
+    "His journey takes him through London and Bucharest. As he attempts to fulfil his master’s wishes, Mott becomes disillusioned with his mission and longs to become human, even if it means giving up his immortality. But who is the author, and how much of his story can be believed? It falls to the postman to get Mott’s message to its intended destination."
   ],
-  "reviews":[
-    {"outlet":"Film Threat","author":"Bobby LePire","date":"21 February 2025","quote":"Highly original and completely absorbing.","score":"9.5/10","url":"https://filmthreat.com/reviews/universe25/"},
-    {"outlet":"The Movie Gourmet","author":"The Movie Gourmet","date":"24 February 2025","quote":"A singular and impressive feature debut","url":"https://www.themoviegourmet.com/universe25-thoughtful-ever-surprising-and-mysterious/"},
-    {"outlet":"Scare Value","author":"Bryan Staebell","date":"3 July 2025","quote":"A gorgeously shot picture with a total commitment to its uniquely told story.","url":"https://scarevalue.com/universe25-review/"},
-    {"outlet":"366 Weird Movies","author":"Giles Edwards","date":"25 February 2025","quote":"A singular sound and visual design.","url":"https://366weirdmovies.com/apocrypha-candidate-universe-25-2025/"},
-    {"outlet":"Movie-Blogger","author":"Federico Furzan","date":"3 March 2025","quote":"It is a movie about becoming human against all odds.","url":"https://www.movie-blogger.com/universe25-2025-film-review/"},
-    {"outlet":"UCL Film & TV Society Journal","author":"Edward Lahner","date":"28 January 2026","quote":"A deeply compelling rabbithole","url":"https://blog.uclfilm.com/2026/01/28/who-is-my-master-and-how-have-i-come-to-be-universe25-2025-a-spontaneous-sunday-at-the-armenian-film-festival/"},
-    {"outlet":"Já Viu?","author":"fabilipo","date":"22 February 2025","quote":"Um musical lindo","language":"pt","translation":"A beautiful musical (translated from Portuguese)","url":"https://javiu.blog/2025/02/22/053-2025-universe-25/?amp=1"}
+  "facts": [
+    ["Running time", "84 minutes"],
+    ["Production", "United Kingdom / Romania"],
+    ["Shot on", "16mm Kodak film"],
+    ["Languages", "English & Romanian"],
+    ["Subtitles", "English"],
+    ["Screening format", "2K DCP · 24 fps · 5.1 surround"],
+    ["Picture", "Colour & black and white"],
+    ["Production company", "Entropy Films"]
   ],
-  "gallery":[
-    {"id":"mirror","alt":"Mott studies his reflection and combs his hair in a dimly lit room."},
-    {"id":"chandelier","alt":"Mott looks up beneath a glowing chandelier."},
-    {"id":"telephone","alt":"Mott takes a telephone call, his face washed in green light."},
-    {"id":"crucifix","alt":"A figure carries a wooden crucifix through a derelict room."}
+  "cast": [
+    ["Giacomo Gex", "Mott / Tom"],
+    ["Dan Sociu", "Andre"],
+    ["Tania Khan", "Jocasta"],
+    ["Jacob Meadows", "Jacob · Young Postman"],
+    ["Alec Christie", "Chris · Boss Postman"],
+    ["Alex Bogdan", "Darius"],
+    ["Ana-Maria Guran", "Perriot"],
+    ["Maria Forrester", "Alina"]
+  ],
+  "credits": [
+    ["Writer, director, composer & producer", "Richard Melkonian"],
+    ["Director of photography", "Juanjo L. Salazar"],
+    ["Production & costume designer", "Elodie Chiper"],
+    ["Co-producers", "Giacomo Gex · Elodie Chiper"],
+    ["Editor", "Tomasso Gallone"],
+    ["Sound designer", "Srdjan Krupjel"],
+    ["Colourist", "Darren Rae"],
+    ["1st assistant director", "Josh Jacobs"],
+    ["1st assistant camera", "Bernat Bonaventura"],
+    ["Film processing & scanning", "Cinelab UK"]
+  ],
+  "festivals": [
+    {
+      "name": "Slamdance Film Festival",
+      "location": "Los Angeles, USA",
+      "date": "23–24 February 2025",
+      "label": "World premiere · Narrative Feature",
+      "url": "https://slamdance.com/wp-content/uploads/2025/02/Slamdance-25-Program-1.pdf"
+    },
+    {
+      "name": "Chattanooga Film Festival",
+      "location": "Chattanooga, USA / virtual programme",
+      "date": "2025",
+      "label": "Festival selection",
+      "url": "https://scarevalue.com/chattanooga-film-festival-2025-round-up/"
+    },
+    {
+      "name": "Armenian Film Festival London",
+      "location": "Institute of Contemporary Arts, London",
+      "date": "7 December 2025",
+      "label": "UK premiere · Screening + director Q&A",
+      "url": "https://ica.art/films/universe25"
+    }
+  ],
+  "reviews": [
+    {
+      "outlet": "Film Threat",
+      "author": "Bobby LePire",
+      "date": "21 February 2025",
+      "quote": "Highly original and completely absorbing.",
+      "score": "9.5/10",
+      "url": "https://filmthreat.com/reviews/universe25/"
+    },
+    {
+      "outlet": "The Movie Gourmet",
+      "author": "The Movie Gourmet",
+      "date": "24 February 2025",
+      "quote": "A singular and impressive feature debut",
+      "url": "https://www.themoviegourmet.com/universe25-thoughtful-ever-surprising-and-mysterious/"
+    },
+    {
+      "outlet": "Scare Value",
+      "author": "Bryan Staebell",
+      "date": "3 July 2025",
+      "quote": "A gorgeously shot picture with a total commitment to its uniquely told story.",
+      "url": "https://scarevalue.com/universe25-review/"
+    },
+    {
+      "outlet": "366 Weird Movies",
+      "author": "Giles Edwards",
+      "date": "25 February 2025",
+      "quote": "A singular sound and visual design.",
+      "url": "https://366weirdmovies.com/apocrypha-candidate-universe-25-2025/"
+    },
+    {
+      "outlet": "Movie-Blogger",
+      "author": "Federico Furzan",
+      "date": "3 March 2025",
+      "quote": "It is a movie about becoming human against all odds.",
+      "url": "https://www.movie-blogger.com/universe25-2025-film-review/"
+    },
+    {
+      "outlet": "UCL Film & TV Society Journal",
+      "author": "Edward Lahner",
+      "date": "28 January 2026",
+      "quote": "A deeply compelling rabbithole",
+      "url": "https://blog.uclfilm.com/2026/01/28/who-is-my-master-and-how-have-i-come-to-be-universe25-2025-a-spontaneous-sunday-at-the-armenian-film-festival/"
+    },
+    {
+      "outlet": "Já Viu?",
+      "author": "fabilipo",
+      "date": "22 February 2025",
+      "quote": "Um musical lindo",
+      "language": "pt",
+      "translation": "A beautiful musical (translated from Portuguese)",
+      "url": "https://javiu.blog/2025/02/22/053-2025-universe-25/?amp=1"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "mirror",
+      "alt": "Mott studies his reflection and combs his hair in a dimly lit room."
+    },
+    {
+      "id": "chandelier",
+      "alt": "Mott looks up beneath a glowing chandelier."
+    },
+    {
+      "id": "telephone",
+      "alt": "Mott takes a telephone call, his face washed in green light."
+    },
+    {
+      "id": "crucifix",
+      "alt": "A figure carries a wooden crucifix through a derelict room."
+    }
   ]
 }
