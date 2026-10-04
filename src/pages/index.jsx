@@ -220,117 +220,8 @@ export default function Home() {
             POPCORN FRIGHTS <small>OFFICIAL SELECTION / 2025</small>
           </span>
         </div>
-        <section className="story" id="film">
-          <div className="story-copy">
-            <SectionLabel number="01">THE FILM</SectionLabel>
-            <h2>{film.logline}</h2>
-            {film.synopsis.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
-            <div className="story-tags">
-              <span>A MUSICAL DRAMA</span>
-              <span>LONDON ↔ BUCHAREST</span>
-              <span>16MM</span>
-            </div>
-          </div>
-          <div className="story-image">
-            <Still
-              name="telephone"
-              alt="Mott listens to his mysterious caller under an electric green light."
-              sizes="(max-width: 900px) 100vw, 45vw"
-            />
-            <span className="image-caption">Giacomo Gex as Mott</span>
-          </div>
-        </section>
-        <section className="statement section" id="statement" aria-labelledby="statement-title">
-          <SectionLabel number="02">RICHARD MELKONIAN / FIELD NOTES</SectionLabel>
-          <h2 id="statement-title">Director’s statement.</h2>
-          <div className="statement-layout">
-            <blockquote className="statement-quote">
-              “My primary goal
-              <br />
-              was to conjure
-              <br />
-              <em>an original mood.</em>”
-            </blockquote>
-            <div>
-              <p className="intro">{statement[0]}</p>
-              <p className="byline">
-                RICHARD MELKONIAN
-                <br />
-                <span>Writer · Director · Composer</span>
-              </p>
-              <details>
-                <summary>
-                  Read the full director’s statement{" "}
-                  <span aria-hidden="true">+</span>
-                </summary>
-                <div className="long-copy">
-                  {statement.slice(1).map((p) => (
-                    <p key={p}>{p}</p>
-                  ))}
-                </div>
-              </details>
-            </div>
-          </div>
-        </section>
-        <section className="trailer section" id="trailer">
-          <SectionLabel number="03">ENTER THE WORLD</SectionLabel>
-          <div className="section-heading">
-            <h2>The trailer.</h2>
-            <a
-              className="text-link"
-              href={film.trailer}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Watch on YouTube <Arrow />
-            </a>
-          </div>
-          <button
-            className="trailer-poster"
-            onClick={() => setModal({ type: "trailer" })}
-            aria-label="Play Universe25 official trailer"
-          >
-            <Still name="chandelier" alt="" sizes="100vw" />
-            <span className="play-circle">
-              <Play />
-            </span>
-            <span className="trailer-label">UNIVERSE25 / OFFICIAL TRAILER</span>
-          </button>
-        </section>
-        <section className="gallery section" id="stills">
-          <div className="section-heading">
-            <div>
-              <SectionLabel number="04">FRAGMENTS FROM THE FILM</SectionLabel>
-              <h2>A world on celluloid.</h2>
-            </div>
-            <a
-              className="text-link"
-              href={asset("/press/Universe25-press-kit.zip")}
-              download
-            >
-              Download press assets ↓
-            </a>
-          </div>
-          <div className="gallery-grid">
-            {film.gallery.map((g, i) => (
-              <button
-                key={g.id}
-                onClick={() => setModal({ type: "image", ...g })}
-                aria-label={`Enlarge still ${i + 1}: ${g.alt}`}
-              >
-                <Still name={g.id} alt={g.alt} />
-                <span>
-                  <span>0{i + 1} / UNIVERSE25</span>
-                  <Arrow />
-                </span>
-              </button>
-            ))}
-          </div>
-        </section>
         <section className="reviews section" id="reviews">
-          <SectionLabel number="05">THE WORD OUTSIDE</SectionLabel>
+          <SectionLabel number="01">THE WORD OUTSIDE</SectionLabel>
           <div className="review-lead">
             <div>
               <span className="score">
@@ -366,6 +257,115 @@ export default function Home() {
                   </span>
                 </figcaption>
               </figure>
+            ))}
+          </div>
+        </section>
+        <section className="story" id="film">
+          <div className="story-copy">
+            <SectionLabel number="02">THE FILM</SectionLabel>
+            <h2>{film.logline}</h2>
+            {film.synopsis.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+            <div className="story-tags">
+              <span>A MUSICAL DRAMA</span>
+              <span>LONDON ↔ BUCHAREST</span>
+              <span>16MM</span>
+            </div>
+          </div>
+          <div className="story-image">
+            <Still
+              name="telephone"
+              alt="Mott listens to his mysterious caller under an electric green light."
+              sizes="(max-width: 900px) 100vw, 45vw"
+            />
+            <span className="image-caption">Giacomo Gex as Mott</span>
+          </div>
+        </section>
+        <section className="statement section" id="statement" aria-labelledby="statement-title">
+          <SectionLabel number="03">RICHARD MELKONIAN / FIELD NOTES</SectionLabel>
+          <h2 id="statement-title">Director’s statement.</h2>
+          <div className="statement-layout">
+            <blockquote className="statement-quote">
+              “My primary goal
+              <br />
+              was to conjure
+              <br />
+              <em>an original mood.</em>”
+            </blockquote>
+            <div>
+              <p className="intro">{statement[0]}</p>
+              <p className="byline">
+                RICHARD MELKONIAN
+                <br />
+                <span>Writer · Director · Composer</span>
+              </p>
+              <details>
+                <summary>
+                  Read the full director’s statement{" "}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <div className="long-copy">
+                  {statement.slice(1).map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section className="trailer section" id="trailer">
+          <SectionLabel number="04">ENTER THE WORLD</SectionLabel>
+          <div className="section-heading">
+            <h2>The trailer.</h2>
+            <a
+              className="text-link"
+              href={film.trailer}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Watch on YouTube <Arrow />
+            </a>
+          </div>
+          <button
+            className="trailer-poster"
+            onClick={() => setModal({ type: "trailer" })}
+            aria-label="Play Universe25 official trailer"
+          >
+            <Still name="chandelier" alt="" sizes="100vw" />
+            <span className="play-circle">
+              <Play />
+            </span>
+            <span className="trailer-label">UNIVERSE25 / OFFICIAL TRAILER</span>
+          </button>
+        </section>
+        <section className="gallery section" id="stills">
+          <div className="section-heading">
+            <div>
+              <SectionLabel number="05">FRAGMENTS FROM THE FILM</SectionLabel>
+              <h2>A world on celluloid.</h2>
+            </div>
+            <a
+              className="text-link"
+              href={asset("/press/Universe25-press-kit.zip")}
+              download
+            >
+              Download press assets ↓
+            </a>
+          </div>
+          <div className="gallery-grid">
+            {film.gallery.map((g, i) => (
+              <button
+                key={g.id}
+                onClick={() => setModal({ type: "image", ...g })}
+                aria-label={`Enlarge still ${i + 1}: ${g.alt}`}
+              >
+                <Still name={g.id} alt={g.alt} />
+                <span>
+                  <span>0{i + 1} / UNIVERSE25</span>
+                  <Arrow />
+                </span>
+              </button>
             ))}
           </div>
         </section>
