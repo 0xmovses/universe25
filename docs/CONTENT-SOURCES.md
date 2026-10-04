@@ -4,7 +4,7 @@ Checked 4 October 2026. This is Richard Melkonian’s 84-minute feature, not Dav
 
 ## Supplied materials
 
-The requested Dropbox folder initially contained zero-byte Dropbox placeholders. No originals were modified. A downloaded `Universe25 EPK_V2.pdf` with the same filename and January 2025 date was recovered from the filmmaker’s Downloads folder. This is the source for all four biographies, the complete director’s statement, cast, creative credits, technical details, synopsis and imagery. The published PDF is an unmodified copy. JPGs are embedded original EPK images extracted without added artwork; website WebPs are optimised derivatives. The press ZIP includes the EPK, poster and five stills.
+The requested Dropbox folder initially contained zero-byte Dropbox placeholders. No originals were modified. A downloaded `Universe25 EPK_V2.pdf` with the same filename and January 2025 date was recovered from the filmmaker’s Downloads folder. This is the source for all four biographies, the complete director’s statement, cast, creative credits, technical details, synopsis and imagery. The published PDF is an unmodified copy. JPGs are embedded original EPK images extracted without added artwork; website WebPs are optimised derivatives. The press ZIP includes the EPK, poster and six stills.
 
 Every EPK biography is included, with grammar corrections. Richard’s Slamdance premiere is now past tense, verified against the festival programme. Giacomo’s then-upcoming project is expressly dated to the EPK rather than silently presented as a current project. Credit spellings follow the EPK: the British Council differs on editor Tomasso/Tommaso Gallone and sound credits, so no silent source substitution was made.
 
@@ -89,4 +89,4 @@ At the filmmaker’s request, the hero title is upright and the 2 in 25 is raise
 
 ## Key stills — 4 October 2026
 
-The filmmaker identified `images/Universe25_2.jpg` and `images/Universe25_5.jpg` as key images. The first now appears beside the synopsis, replacing the telephone still there; the second replaces the repeated comb still in the film gallery. Responsive WebP derivatives were regenerated from those supplied files. The comb remains the hero, and the telephone remains in the film gallery. The original Dropbox files were not changed.
+The filmmaker identified `images/Universe25_2.jpg` and `images/Universe25_5.jpg` as key images. Both appear in the four-image film grid: the first is the close-up of the couple, and the second replaces the repeated comb still. The telephone still appears beside the synopsis. Responsive WebP derivatives were regenerated from those supplied files; `Universe25_2.jpg` was added to the press downloads and ZIP. The comb remains the hero. The original Dropbox files were not changed.

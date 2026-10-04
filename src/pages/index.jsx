@@ -280,11 +280,11 @@ export default function Home() {
           </div>
           <div className="story-image">
             <Still
-              name="jocasta"
-              alt="An intimate close-up of two characters in Universe25."
+              name="telephone"
+              alt="Mott listens to his mysterious caller under an electric green light."
               sizes="(max-width: 900px) 100vw, 45vw"
             />
-            <span className="image-caption">UNIVERSE25 / FILM STILL</span>
+            <span className="image-caption">Giacomo Gex as Mott</span>
           </div>
         </section>
         <PressAside review={film.reviews.find((r) => r.placement === "statement")} />
@@ -607,7 +607,7 @@ export default function Home() {
               </Download>
               <Download
                 href="/press/Universe25-press-kit.zip"
-                meta="ZIP · EPK, POSTER & 5 FILM STILLS"
+                meta="ZIP · EPK, POSTER & 6 FILM STILLS"
               >
                 Complete press assets
               </Download>

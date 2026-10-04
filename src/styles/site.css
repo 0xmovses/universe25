@@ -27,6 +27,7 @@ body.modal-open {
 a {
   color: inherit;
   text-decoration: none;
+  font-weight: 700;
 }
 button {
   font: inherit;
@@ -1490,7 +1491,7 @@ body::after {
   opacity: 0.035;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.5' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
 }
-.wordmark { font-weight: 500; }
+.wordmark { font-weight: 700; }
 .signal { border-radius: 0; width: 5px; height: 9px; }
 .nav-contact { border: 0; border-left: 1px dashed #687261; }
 .header nav { font-family: "Courier New", monospace; font-size: 11px; }
@@ -1581,4 +1582,15 @@ button.text-link:hover { color: var(--green); }
 .download > .diagonal-arrow,
 .festival-list > .diagonal-arrow {
   color: var(--green);
+}
+
+/* Keep text inside linked cards and display links as clear as the link labels. */
+.festival-list a h3,
+.festival-list a .festival-index,
+.festival-list a .festival-date,
+.press-aside a {
+  font-weight: 700;
+}
+.footer-title {
+  font-weight: 600;
 }
