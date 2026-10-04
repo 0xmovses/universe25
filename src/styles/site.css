@@ -365,6 +365,31 @@ small,
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
 }
+.reviews-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 54px;
+}
+.reviews-intro h2 { margin: 0; }
+.reviews-intro p { max-width: 360px; margin: 0; color: var(--muted); }
+.press-aside {
+  padding: clamp(44px, 7vw, 100px) var(--pad);
+  border-block: 1px dashed var(--line);
+  background: #0d120d;
+}
+.press-aside-label,
+.press-aside a { font: 11px/1.6 "Courier New", monospace; letter-spacing: .08em; }
+.press-aside-label { color: var(--green); text-transform: uppercase; }
+.press-aside blockquote {
+  max-width: 1000px;
+  margin: 24px 0;
+  font-size: clamp(26px, 4vw, 55px);
+  line-height: 1.14;
+  letter-spacing: -.035em;
+}
+.press-aside a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
 .reviews-grid figure {
   border-top: 1px solid var(--line);
   padding: 25px 0;
@@ -1095,6 +1120,8 @@ footer > div {
     grid-template-columns: 1fr 1fr;
     gap: 0 25px;
   }
+  .reviews-intro { display: block; margin-bottom: 36px; }
+  .reviews-intro p { margin-top: 16px; }
   .reviews-grid blockquote {
     font-size: 18px;
   }
@@ -1505,7 +1532,7 @@ body::after {
 .statement > h2 { font-size: clamp(35px, 5vw, 72px); margin-bottom: 55px; }
 .statement-layout { grid-template-columns: 1fr 1fr; gap: 70px; }
 .statement-portrait-column { display: grid; gap: 28px; align-content: start; }
-.statement-portrait-column > a { display: block; width: min(100%, 370px); }
+.statement-portrait-column > a { display: block; width: min(100%, 280px); }
 .statement-portrait-column img { display: block; width: 100%; height: auto; aspect-ratio: 1582 / 1817; object-fit: cover; filter: grayscale(1); }
 .statement-portrait-column > a:hover img { filter: grayscale(.65); }
 .statement .byline a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
@@ -1539,7 +1566,7 @@ button.text-link:hover { color: var(--green); }
   .hero .button { min-height: 46px; padding: 12px 16px; }
   .hero-actions .text-link { font-size: 11px; }
   .statement-layout { grid-template-columns: 1fr; gap: 35px; }
-  .statement-portrait-column > a { width: min(100%, 300px); }
+  .statement-portrait-column > a { width: min(100%, 240px); }
   .statement > h2 { margin-bottom: 35px; }
   .statement-quote { font-size: 38px; }
   .statement .intro { font-size: 16px; }

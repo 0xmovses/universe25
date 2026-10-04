@@ -69,6 +69,17 @@ function Download({ href, children, meta }) {
     </a>
   );
 }
+function PressAside({ review }) {
+  return (
+    <aside className="press-aside" aria-label={`Review excerpt from ${review.outlet}`}>
+      <span className="press-aside-label">FROM THE REVIEWS / {review.outlet}</span>
+      <blockquote>“{review.quote}”</blockquote>
+      <a href={review.url} target="_blank" rel="noreferrer">
+        {review.author} · Read the review <Arrow />
+      </a>
+    </aside>
+  );
+}
 const request = `mailto:${film.email}?subject=${encodeURIComponent("Universe25 — review screener request")}&body=${encodeURIComponent("Hello Richard,\n\nI would like to cover Universe25.\n\nName / publication / channel:\nProfile or website:\nPlanned coverage and timing:\nReview screener request:\n\nThank you!")}`;
 
 export default function Home() {
@@ -142,6 +153,7 @@ export default function Home() {
         >
           {[
             ["film", "The film"],
+            ["reviews", "Reviews"],
             ["statement", "Director’s statement"],
             ["stills", "Inside the film"],
             ["behind-the-scenes", "On set"],
@@ -222,6 +234,10 @@ export default function Home() {
         </div>
         <section className="reviews section" id="reviews">
           <SectionLabel number="01">THE WORD OUTSIDE</SectionLabel>
+          <div className="reviews-intro">
+            <h2>In the press.</h2>
+            <p>Critics have found a strange, human story in Mott’s journey. Read their words here, then follow each excerpt to the full review.</p>
+          </div>
           <div className="review-lead">
             <div>
               <span className="score">
@@ -242,7 +258,7 @@ export default function Home() {
             </figure>
           </div>
           <div className="reviews-grid">
-            {film.reviews.slice(1).map((r) => (
+            {film.reviews.slice(1).filter((r) => !r.placement).map((r) => (
               <figure key={r.outlet}>
                 <blockquote lang={r.language}>“{r.quote}”</blockquote>
                 {r.translation && (
@@ -282,6 +298,7 @@ export default function Home() {
             <span className="image-caption">Giacomo Gex as Mott</span>
           </div>
         </section>
+        <PressAside review={film.reviews.find((r) => r.placement === "story")} />
         <section className="statement section" id="statement" aria-labelledby="statement-title">
           <SectionLabel number="03">RICHARD MELKONIAN / FIELD NOTES</SectionLabel>
           <h2 id="statement-title">Director’s statement.</h2>
@@ -374,6 +391,7 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <PressAside review={film.reviews.find((r) => r.placement === "gallery")} />
         <section className="festivals section" id="festivals">
           <SectionLabel number="06">ON THE BIG SCREEN</SectionLabel>
           <div className="section-heading">

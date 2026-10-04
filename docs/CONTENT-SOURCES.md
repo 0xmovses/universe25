@@ -23,10 +23,15 @@ Only brief attributed quotations are reproduced; every quotation links to the fu
 | Movie-Blogger | Federico Furzan | 3 Mar 2025 | https://www.movie-blogger.com/universe25-2025-film-review/ |
 | UCL Film & TV Society Journal | Edward Lahner | 28 Jan 2026 | https://blog.uclfilm.com/2026/01/28/who-is-my-master-and-how-have-i-come-to-be-universe25-2025-a-spontaneous-sunday-at-the-armenian-film-festival/ |
 | Já Viu? | fabilipo | 22 Feb 2025 | https://javiu.blog/2025/02/22/053-2025-universe-25/?amp=1 |
+| The Moya View | Jonathan Moya | 28 Feb 2025 | https://themoyaview.com/2025/02/28/slamdance-2025/ |
+| Eye for Film | Jennie Kermode | 19 Apr 2025 | https://www.eyeforfilm.co.uk/review/universe-25-2025-film-review-by-jennie-kermode |
+| Film Focus Online | Elliot Lines | 6 Dec 2025 | https://www.filmfocusonline.com/post/universe25-review |
 
 Já Viu’s Portuguese quotation is displayed in the original with a clearly labelled English translation. UCL’s excerpt and others are favourable excerpts; the links let readers see the whole assessment, including qualifications. Film Threat’s 9.5/10 belongs to this film; the `/universe-25/` URL is a DIFFERENT film and must not be used.
 
-Additional coverage found: The Movie Gourmet’s “2025: 14 new filmmakers to watch” (https://www.themoviegourmet.com/?p=48108); Letterboxd audience reviews (https://letterboxd.com/film/universe-25-2025/reviews/); Film Focus Online’s mixed review (https://www.filmfocusonline.com/post/universe25-review); Sheila Nayar’s Journal of Religion & Film article (https://digitalcommons.unomaha.edu/jrf/vol29/iss1/55/). The last article’s full PDF could not be retrieved, so its sentiment has not been classified and no pull quote is fabricated. Searches cannot establish that every positive review on the internet has been found.
+Additional coverage found: The Movie Gourmet’s “2025: 14 new filmmakers to watch” (https://www.themoviegourmet.com/?p=48108); Letterboxd audience reviews (https://letterboxd.com/film/universe-25-2025/reviews/); HorrorBuzz’s mixed review (https://horrorbuzz.com/movies/universe-25-slamdance-2025/); Professor Horror’s Popcorn Frights review (https://professorhorror.com/Popcorn-Frights-Review-UNIVERSE-25-is-A-Cosmic-Experiment-in-Faith-Failure-and-Forgotten-Stories/); Sheila Nayar’s Journal of Religion & Film article (https://digitalcommons.unomaha.edu/jrf/vol29/iss1/55/). The last article’s full PDF could not be retrieved, so its sentiment has not been classified and no pull quote is fabricated. Searches cannot establish that every positive review on the internet has been found.
+
+The review section was expanded on 4 October 2026 with longer excerpts and two linked pull quotes placed alongside the story and stills. Eye for Film and Film Focus Online also express reservations in their full reviews; the site links directly to those assessments. All excerpts remain below 25 words per publication.
 
 ## Festival history
 
@@ -86,3 +91,7 @@ The connected Google Drive plugin enumerated and downloaded all 126 JPEG photogr
 ## Title, icons and statement punctuation — 4 October 2026
 
 At the filmmaker’s request, the hero title is upright and the 2 in 25 is raised above the baseline. Every diagonal arrow is an inline SVG, avoiding platform emoji substitution. The three em dashes in the website director’s statement are replaced with colons or a sentence break. The downloadable archival EPK remains the supplied original. These edits and the preceding audience/press and full BTS gallery changes are committed together.
+
+## BTS edit — 4 October 2026
+
+The production gallery was reduced from 126 photographs to 21, choosing one frame from each selected setup instead of showing adjacent burst frames. Two additional photographs, `DSC02916.jpeg` and `DSC03176.jpeg`, came from the Drive folder `BTS Selects Jocasta`. The existing three featured images remain first. The film-stills gallery was not changed in this pass: the five entries in the local Dropbox `images` folder are zero-byte cloud placeholders, so their image contents cannot be verified against the site assets yet.
