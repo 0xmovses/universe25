@@ -1561,19 +1561,21 @@ body::after {
 .section-label::after { content: ""; flex: 1; border-top: 1px dashed var(--line); margin-left: 12px; }
 .story .section-label { margin-bottom: 38px; }
 .statement { background: #111711; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.statement .section-label { margin-bottom: clamp(60px, 8vw, 115px); }
+.statement .section-label { margin-bottom: clamp(30px, 4vw, 56px); }
 .statement .section-label > span:first-child::before,
 .statement .section-label > span:first-child::after,
 .statement .section-label::after { content: none; }
-.statement > h2.statement-quote { max-width: 1200px; margin: 0 0 clamp(70px, 9vw, 130px); font-size: clamp(54px, 8.4vw, 128px); font-weight: 400; line-height: 1.02; letter-spacing: -.055em; }
-.statement .intro { max-width: 1180px; margin: 0 0 56px; font-size: clamp(27px, 4.3vw, 64px); line-height: 1.35; letter-spacing: -.03em; }
-.statement-context { max-width: 1150px; margin: 0; color: #bac2b8; font-size: clamp(18px, 2.55vw, 36px); line-height: 1.55; }
-.statement .byline { margin: clamp(75px, 10vw, 145px) 0 65px; font-size: 15px !important; letter-spacing: .08em; }
+.statement > h2.statement-quote { max-width: 900px; margin: 0 0 clamp(28px, 4vw, 52px); font-size: clamp(38px, 5.4vw, 78px); font-weight: 400; line-height: 1.08; letter-spacing: -.045em; }
+.statement-portrait { width: clamp(92px, 12vw, 150px); margin: 0 0 28px; }
+.statement-portrait img { display: block; width: 100%; aspect-ratio: 0.87; object-fit: cover; filter: saturate(.72); }
+.statement .intro { max-width: 760px; margin: 0 0 28px; font-size: clamp(20px, 2.5vw, 32px); line-height: 1.4; letter-spacing: -.02em; }
+.statement-context { max-width: 760px; margin: 0; color: #bac2b8; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.65; }
+.statement .byline { margin: clamp(36px, 5vw, 64px) 0 32px; font-size: 12px !important; letter-spacing: .07em; }
 .statement .byline span { display: inline-block; margin-top: 9px; letter-spacing: .04em; }
 .statement .byline a { color: inherit; text-decoration: none; }
 .statement .byline a:hover { color: var(--green); }
 .statement details { margin-top: 0; }
-.statement summary { color: var(--fg); font-size: clamp(16px, 2vw, 26px); min-height: 80px; }
+.statement summary { color: var(--fg); font-size: clamp(14px, 1.2vw, 17px); min-height: 58px; }
 .press { background: var(--bg); border-top: 1px dashed #6a7c60; }
 .press h2 { font-family: "Courier New", monospace; font-size: clamp(38px, 5vw, 66px); font-weight: 400; }
 .press-requests { display: grid; justify-items: start; gap: 12px; }
@@ -1615,12 +1617,13 @@ button.text-link:hover { color: var(--green); }
   .hero-actions { margin-top: 20px; max-width: none; gap: 10px 24px; }
   .hero .button { min-height: 46px; padding: 12px 16px; }
   .hero-actions .text-link { font-size: 11px; }
-  .statement .section-label { margin-bottom: 64px; }
-  .statement > h2.statement-quote { margin-bottom: 70px; font-size: clamp(32px, 10.4vw, 70px); }
-  .statement .intro { margin-bottom: 40px; font-size: clamp(24px, 6vw, 38px); }
-  .statement-context { font-size: 18px; }
-  .statement .byline { margin: 75px 0 45px; font-size: 12px !important; }
-  .statement summary { font-size: 16px; min-height: 70px; }
+  .statement .section-label { margin-bottom: 34px; }
+  .statement > h2.statement-quote { margin-bottom: 28px; font-size: clamp(34px, 9vw, 56px); }
+  .statement-portrait { width: 105px; margin-bottom: 24px; }
+  .statement .intro { margin-bottom: 22px; font-size: clamp(20px, 5.4vw, 28px); }
+  .statement-context { font-size: 16px; }
+  .statement .byline { margin: 38px 0 26px; font-size: 11px !important; }
+  .statement summary { font-size: 14px; min-height: 58px; }
   .bts-contact-sheet { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .header nav .nav-contact { border-top: 1px dashed var(--line); margin-top: 10px; }
 }

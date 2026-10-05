@@ -301,6 +301,13 @@ export default function Home() {
             <br />
             <em>an original mood.</em>”
           </h2>
+          <div className="statement-portrait">
+            <Still
+              name="richard-melkonian"
+              alt="Richard Melkonian, writer, director and composer of Universe25."
+              sizes="(max-width: 700px) 38vw, 180px"
+            />
+          </div>
           <p className="intro">Music, image and text. A film discovered in the making.</p>
           <p className="statement-context">
             Written as it was shot, composed as it was edited: Richard Melkonian’s debut feature grew through a fluid exchange between storytelling, performance and music.
