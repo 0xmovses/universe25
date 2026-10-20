@@ -3,6 +3,7 @@ import { withPrefix, graphql } from "gatsby";
 import film from "../data/film.json";
 import bios from "../data/bios.json";
 import statement from "../data/statement.json";
+import seo from "../data/seo.json";
 import btsGallery from "../data/bts.json";
 import redRoomGallery from "../data/redRoom.json";
 import "../styles/site.css";
@@ -797,7 +798,7 @@ export const query = graphql`
 
 export function Head({ data }) {
   const siteUrl = data.site.siteMetadata.siteUrl.replace(/\/$/, "");
-  const title = "Universe25 — A film by Richard Melkonian";
+  const title = seo.title;
   const schema = {
     "@context": "https://schema.org",
     "@type": "Movie",
@@ -825,14 +826,14 @@ export function Head({ data }) {
       <title>{title}</title>
       <meta
         name="description"
-        content={`${film.logline} Watch the trailer, read reviews, meet the filmmakers and download the official press kit.`}
+        content={seo.description}
       />
       <meta name="theme-color" content="#090a09" />
       <link rel="icon" type="image/svg+xml" href={asset("/favicon.svg")} />
       <link rel="canonical" href={`${siteUrl}/`} />
       <meta property="og:type" content="video.movie" />
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={film.logline} />
+      <meta property="og:description" content={seo.description} />
       <meta property="og:url" content={`${siteUrl}/`} />
       <meta property="og:image" content={`${siteUrl}/images/social.jpg`} />
       <meta property="og:image:width" content="1200" />
@@ -843,7 +844,7 @@ export function Head({ data }) {
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={film.logline} />
+      <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={`${siteUrl}/images/social.jpg`} />
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
     </>

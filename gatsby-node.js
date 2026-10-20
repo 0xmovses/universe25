@@ -1,10 +1,10 @@
 const fs = require("node:fs");
 const path = require("node:path");
+const seo = require("./src/data/seo.json");
+
 exports.onPostBuild = ({ store }) => {
   const root = store.getState().program.directory;
-  const url = (
-    process.env.SITE_URL || "https://0xmovses.github.io/universe25"
-  ).replace(/\/$/, "");
+  const url = (process.env.SITE_URL || seo.siteUrl).replace(/\/$/, "");
   fs.writeFileSync(
     path.join(root, "public", "sitemap.xml"),
     `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${url}/</loc></url></urlset>`,

@@ -1,6 +1,7 @@
-const siteUrl = process.env.SITE_URL || "https://0xmovses.github.io/universe25";
+const seo = require("./src/data/seo.json");
+const siteUrl = (process.env.SITE_URL || seo.siteUrl).replace(/\/$/, "");
 module.exports = {
-  siteMetadata: { title: "Universe25 — A film by Richard Melkonian", siteUrl },
+  siteMetadata: { title: seo.title, siteUrl },
   pathPrefix: process.env.PATH_PREFIX || "",
   trailingSlash: "always",
   plugins: [],
