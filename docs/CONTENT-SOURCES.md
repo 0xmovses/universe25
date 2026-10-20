@@ -106,3 +106,13 @@ The filmmaker identified `images/Universe25_2.jpg` and `images/Universe25_5.jpg`
 Richard supplied https://www.instagram.com/p/DaQwd0rjkgi/ and asked for its images in the gallery and more. The post shows seven production photographs followed by one finished film frame. The first seven were matched visually, in post order, to `DSC03514.jpg`, `DSC00355.jpeg`, `DSC01911.jpeg`, `DSC02890.jpeg`, `DSC01573.jpeg`, `DSC02625.jpeg`, and `DSC02866.jpeg` in the Google Drive `BTS Selects Jocasta` folder (`1usw7NzDWTWOG2U1vmVqUXq6KIZzg71-v`). These originals were used for local responsive derivatives and added to the BTS contact sheet. Original downloads remain outside the repository.
 
 The eighth image is a frame from the finished film. It was not found among the nearby `Film Selects - ungraded` Drive files or the supplied Dropbox stills, so its responsive derivatives were made from the image visible in Richard's Instagram post. The site presents all eight images in post order in a separate red-room story, identifies the last as a film frame, and links to the post. The set and location details in the accompanying text are from Richard's caption. No photographer attribution was supplied for the Drive BTS images; none is invented.
+
+
+## Canonical domain and sitemap — 20 October 2026
+
+The public apex `https://universe25film.com/` serves the film site over HTTPS from Vercel. The authenticated Vercel project lists this domain as verified. It is the primary canonical origin; GitHub Pages remains a fallback copy. Search/social descriptions are shortened to 155 characters and retain only existing film and website information. Canonical, social-image and Movie URL fields, generated robots/sitemap files, and the Pages fallback build now consistently use the primary domain.
+
+The existing `www` DNS record resolves to the apex, but `www.universe25film.com` was absent from the Vercel project and failed HTTPS certificate verification. The subdomain was added to the same project with a permanent 308 redirect to the apex. Search Console submission and index coverage must be checked through the Google account; serving a valid sitemap does not prove either.
+
+
+Google Search Console was opened in the filmmaker’s existing signed-in Google session. A URL-prefix property for `https://universe25film.com/` was added, and Google’s supplied HTML ownership-verification file is included under `static/`. This file is a public ownership proof, not a login credential. Verification and sitemap-submission status are checked after the production deployment.

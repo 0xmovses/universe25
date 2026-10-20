@@ -25,7 +25,7 @@ jobs:
         env:
           GATSBY_TELEMETRY_DISABLED: '1'
           PATH_PREFIX: /universe25
-          SITE_URL: https://0xmovses.github.io/universe25
+          SITE_URL: https://universe25film.com
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

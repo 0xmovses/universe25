@@ -24,13 +24,16 @@ npm run serve
 For GitHub Pages:
 
 ```sh
-PATH_PREFIX=/universe25 SITE_URL=https://0xmovses.github.io/universe25 npm run build -- --prefix-paths
+PATH_PREFIX=/universe25 SITE_URL=https://universe25film.com npm run build -- --prefix-paths
 ```
 
-The GitHub Actions workflow deploys `public/` with Pages. Configure Pages to use GitHub Actions. For another host, use `npm run build`, publish `public`, and set `SITE_URL` to the final public origin. Leave `PATH_PREFIX` empty on a root domain. No secret is needed in the frontend.
+Vercel hosts the primary site at https://universe25film.com/. GitHub Pages is a fallback copy: its asset prefix differs, but its canonical link and sitemap still identify the primary domain. The GitHub Actions workflow deploys `public/` with Pages. For a root-domain build, leave `PATH_PREFIX` empty. `SITE_URL` overrides the canonical origin when intentionally moving the site; do not set it to a preview or fallback host. No secret is needed in the frontend.
+
+The build generates `/robots.txt` and `/sitemap.xml` at the Vercel domain root. Submit `https://universe25film.com/sitemap.xml` in Google Search Console for the verified `https://universe25film.com/` URL-prefix property or `sc-domain:universe25film.com` domain property. The Google-issued verification file in `static/google6a0ed5ae6dde6051.html` must remain available at the domain root to retain the owner’s Search Console verification. Search Console verification and index status require account access; a published sitemap alone does not confirm submission or indexing.
 
 ## Edit
 
+- `src/data/seo.json`: primary origin, title and concise search/social description.
 - `src/data/film.json`: synopsis, contact, social links, cast, credits, festivals, reviews and technical facts.
 - `src/data/bios.json`: website biographies.
 - `src/data/bts.json`: the production gallery and source filenames.
