@@ -269,9 +269,34 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <section className="trailer section" id="trailer">
+          <SectionLabel number="02">ENTER THE WORLD</SectionLabel>
+          <div className="section-heading">
+            <h2>The trailer.</h2>
+            <a
+              className="text-link"
+              href={film.trailer}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Watch on YouTube <Arrow />
+            </a>
+          </div>
+          <button
+            className="trailer-poster"
+            onClick={() => setModal({ type: "trailer" })}
+            aria-label="Play Universe25 official trailer"
+          >
+            <Still name="chandelier" alt="" sizes="100vw" />
+            <span className="play-circle">
+              <Play />
+            </span>
+            <span className="trailer-label">UNIVERSE25 / OFFICIAL TRAILER</span>
+          </button>
+        </section>
         <section className="story" id="film">
           <div className="story-copy">
-            <SectionLabel number="02">THE FILM</SectionLabel>
+            <SectionLabel number="03">THE FILM</SectionLabel>
             <h2>{film.logline}</h2>
             {film.synopsis.map((p) => (
               <p key={p}>{p}</p>
@@ -293,7 +318,7 @@ export default function Home() {
         </section>
         <PressAside review={film.reviews.find((r) => r.placement === "statement")} />
         <section className="statement section" id="statement" aria-labelledby="statement-title">
-          <SectionLabel number="03">IN THE DIRECTOR’S WORDS</SectionLabel>
+          <SectionLabel number="04">IN THE DIRECTOR’S WORDS</SectionLabel>
           <h2 id="statement-title" className="statement-quote">
             “My primary goal
             <br />
@@ -328,31 +353,6 @@ export default function Home() {
               ))}
             </div>
           </details>
-        </section>
-        <section className="trailer section" id="trailer">
-          <SectionLabel number="04">ENTER THE WORLD</SectionLabel>
-          <div className="section-heading">
-            <h2>The trailer.</h2>
-            <a
-              className="text-link"
-              href={film.trailer}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Watch on YouTube <Arrow />
-            </a>
-          </div>
-          <button
-            className="trailer-poster"
-            onClick={() => setModal({ type: "trailer" })}
-            aria-label="Play Universe25 official trailer"
-          >
-            <Still name="chandelier" alt="" sizes="100vw" />
-            <span className="play-circle">
-              <Play />
-            </span>
-            <span className="trailer-label">UNIVERSE25 / OFFICIAL TRAILER</span>
-          </button>
         </section>
         <section className="gallery section" id="stills">
           <div className="section-heading">
